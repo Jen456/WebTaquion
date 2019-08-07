@@ -1,80 +1,58 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var cleanCss = require('gulp-clean-css');
-var rename = require('gulp-rename'); 
-var uglify = require('gulp-uglify');
-var gulpSequence = require('gulp-sequence');
-var autoPrefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var jshint = require('gulp-jshint');
-var csslint = require('gulp-csslint');
-var htmlReporter = require('gulp-csslint-report');
 var plumber = require('gulp-plumber');
-var sourcemaps = require('gulp-sourcemaps');
-
-//plumber error 
-var onError = function (err) {
-  console.log(err);
-};
-
-//create sourcemaps, convert scss to css, lint check, minify and prefix
-gulp.task('css', function(){
-    return gulp.src('app/scss/**/*.scss')
+var rename = require('gulp-rename');
+var autoPrefixer = require('gulp-autoprefixer');
+//if node version is lower than v.0.1.2
+require('es6-promise').polyfill();
+var cssComb = require('gulp-csscomb');
+var cmq = require('gulp-merge-media-queries');
+var cleanCss = require('gulp-clean-css');
+var uglify = require('gulp-uglify');
+gulp.task('css',function(){
+    gulp.src(['assets/css/**/*.css'])
         .pipe(plumber({
-          errorHandler: onError
+            handleError: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
         }))
-        .pipe(sourcemaps.init())
-        .pipe(sass())
-        .pipe(csslint())
-        .pipe(htmlReporter())
-        .pipe(cleanCss())
+        .pipe(autoPrefixer())
+        .pipe(cssComb())
+        .pipe(cmq({log:true}))
+        .pipe(gulp.dest('dist/css'))
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(autoPrefixer({
-            browsers: ['last 3 versions'],
-            cascade: false
-        }))
-        .pipe(sourcemaps.write('.'))
+        .pipe(cleanCss())
         .pipe(gulp.dest('dist/css'))
 });
-
-
-//create sourcemaps, lint check, compile into one file, minify
-gulp.task('js', function() {
-  return gulp.src('app/js/**/*.js')
-    .pipe(plumber({
-        errorHandler: onError
-    }))
-    .pipe(sourcemaps.init())
-    .pipe(jshint())
-    .pipe(jshint.reporter('gulp-jshint-html-reporter', {
-        filename: __dirname + '/jshint-output.html',
-        createMissingFolders : false  
-    }))
-    .pipe(concat('all.js'))
-    .pipe(uglify())
-    .pipe(rename({
-        suffix: '.min'
-    }))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/js'))
-});                                                                            
-
-//copy php files to app
-gulp.task('phpCopy', function(){
-    return gulp.src('app/*.php')
+gulp.task('js',function(){
+    gulp.src(['assets/js/**/*.js'])
         .pipe(plumber({
-          errorHandler: onError
+            handleError: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
         }))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist/js'))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'))
 });
-
-//functions to run on file save
-gulp.task('watch', function(){
-    gulp.watch('app/scss/**/*.scss', ['css']);
-    gulp.watch('app/*.php', ['phpCopy']);
-    gulp.watch('app/js/**/*.js', ['js']);
+gulp.task('html',function(){
+    gulp.src(['html/**/*.html'])
+        .pipe(plumber({
+            handleError: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(gulp.dest('./'))
 });
-
-gulp.task('default', ['css', 'js', 'phpCopy']);
+gulp.task('default',function(){
+    gulp.watch('assets/js/**/*.js',['js']);
+    gulp.watch('assets/css/**/*.css',['css']);
+    gulp.watch('html/**/*.html',['html']);
+});
