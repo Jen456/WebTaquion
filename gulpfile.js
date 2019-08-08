@@ -38,6 +38,7 @@ gulp.task('scripts', function() {
 // Images Task
 gulp.task('images', function() {
     return gulp.src('src/img/*')
+        .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
 });
 
@@ -60,4 +61,4 @@ gulp.task('watch', function() {
   });
 
 // Default Task
-gulp.task('default', gulp.parallel('styles', 'scripts', 'images', 'html','fileinclude','watch'));
+gulp.task('default', gulp.parallel('styles', 'scripts', 'images', 'html','fileinclude', 'watch'));
