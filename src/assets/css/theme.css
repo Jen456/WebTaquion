@@ -8,7 +8,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -12281,3 +12281,10 @@ body.compensate-for-scrollbar {
 @media (min-width: 992px) {
   .sidenav-right {
     right: 0; } }
+
+
+.btn-taquion-soft {
+  color: #FFFFFF;
+  background-color: #C2CFF9;
+  border-color: #C2CFF9;
+  box-shadow: none; }

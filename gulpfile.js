@@ -1,15 +1,25 @@
+//
+// Variables ===================================
+//
 
-// Modules & Plugins
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var imagemin = require("gulp-imagemin"); 
-var changedInPlace = require('gulp-changed-in-place');
-var inject = require('gulp-inject');
-var uglify = require('gulp-uglify');
+// Load dependencies
+const autoprefixer = require('gulp-autoprefixer');
 const browsersync = require('browser-sync').create();
+const cached = require('gulp-cached');
+const cleancss = require('gulp-clean-css');
+const del = require('del');
+const fileinclude = require('gulp-file-include');
+const gulp = require('gulp');
+const gulpif = require('gulp-if');
+const npmdist = require('gulp-npm-dist');
+const replace = require('gulp-replace');
+const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
+const useref = require('gulp-useref');
 
-// Definimos paths del archivo original
-var paths = {
+
+// Define paths
+const paths = {
   base:   {
     base:         {
       dir:    './'
@@ -23,28 +33,24 @@ var paths = {
   },
   dist:   {
     base:   {
-      dir:    './dist/'
+      dir:    './dist'
     },
     libs:   {
       dir:    './dist/assets/libs'
-    },
-    files:   {
-      dir:    './dist/**'
     }
-    
   },
   src:    {
     base:   {
-      dir:    './src/',
+      dir:    './src',
       files:  './src/**/*'
     },
     css:    {
-      dir:    './src/assets/css',
+      dir:    './src/assets/css/',
       files:  './src/assets/css/**/*'
     },
     html:   {
       dir:    './src',
-      files:  './src/**/*',
+      files:  './src/**/*.html',
     },
     img:    {
       dir:    './src/assets/img',
@@ -55,7 +61,7 @@ var paths = {
       files:  './src/assets/js/**/*'
     },
     partials:   {
-      dir:    './src/partials/',
+      dir:    './src/partials',
       files:  './src/partials/**/*'
     },
     scss:   {
@@ -69,67 +75,113 @@ var paths = {
     }
   }
 };
-gulp.copy=function(paths,dist){
-  return gulp.src(src, {base:"."})
-      .pipe(gulp.dest(dist));
-};
 
-gulp.task('index', function () {
-  var target = gulp.src('src/assets/**/*');
-  // It's not necessary to read the files (will speed up things), we're only after their paths:
-  var sources = gulp.src(['./src/**/*.js', './src/**/*.css', './src/**/*.svg', './src/**/*.png', './src/**/*.woff', './src/**/*.woff2'], {read: false});
 
-  return target.pipe(inject(sources))
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/'));
+//
+// Tasks ===================================
+//
+
+gulp.task('browsersync', function(callback) {
+  browsersync.init({
+    server: {
+      baseDir: [paths.src.tmp.dir, paths.src.base.dir, paths.base.base.dir]
+    },
+  });
+  callback();
 });
 
-// imagenes 
-gulp.task("png", function() {
-  return gulp.src(['src/assets/img/**/*.png'], {base: 'assets'})
-    .pipe(imagemin())
-    .pipe(changedInPlace())
-    .pipe(gulp.dest("dist/img"));
+gulp.task('browsersyncReload', function(callback) {
+  browsersync.reload();
+  callback();
 });
 
-// Styles Task
-gulp.task('styles', function() {
-  return gulp.src('src/assets/**/*.css')
-
-      .pipe(gulp.dest('dist'));
-});
-
-// Scripts Task
-gulp.task('scripts', function() {
-  return gulp.src('src/assets/**/*.js')
-      .pipe(uglify())
-      .pipe(gulp.dest('dist'));
-      
-});
-
-gulp.task('svg', function() {
-  return gulp.src('src/assets/**/*.svg')
-      .pipe(gulp.dest('dist/svg'));
+gulp.task('watch', function() {
+  gulp.watch(paths.src.scss.files, gulp.series('scss'));
+  gulp.watch([paths.src.js.files, paths.src.img.files], gulp.series('browsersyncReload'));
+  gulp.watch([paths.src.html.files, paths.src.partials.files], gulp.series('fileinclude', 'browsersyncReload'));
 });
 
 gulp.task('scss', function() {
-  return gulp.src('src/assets/**/*.scss')
-      .pipe(gulp.dest('dist'));
+  return gulp
+    .src(paths.src.scss.main)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(paths.src.css.dir))
+    .pipe(browsersync.stream());
+});
+
+gulp.task('fileinclude', function(callback) {
+  return gulp
+    .src([
+      paths.src.html.files,
+      '!' + paths.src.tmp.files,
+      '!' + paths.src.partials.files
+    ])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file',
+      indent: true
+    }))
+    .pipe(cached())
+    .pipe(gulp.dest(paths.src.tmp.dir));
+});
+
+gulp.task('clean:tmp', function(callback) {
+  del.sync(paths.src.tmp.dir);
+  callback();
+});
+
+gulp.task('clean:packageLock', function(callback) {
+  del.sync(paths.base.packageLock.files);
+  callback();
+});
+
+gulp.task('clean:dist', function(callback) {
+  del.sync(paths.dist.base.dir);
+  callback();
+});
+
+
+gulp.task('copy:all', function() {
+  return gulp.src([
+      paths.src.base.files,
+      '!' + paths.src.partials.dir, '!' + paths.src.partials.files,
+      '!' + paths.src.scss.dir, '!' + paths.src.scss.files,
+      '!' + paths.src.tmp.dir, '!' + paths.src.tmp.files,
+      '!' + paths.src.js.dir, '!' + paths.src.js.files,
+      '!' + paths.src.css.dir, '!' + paths.src.css.files,
+      '!' + paths.src.html.files,
+    ])
+    .pipe(gulp.dest(paths.dist.base.dir));
+});
+
+gulp.task('copy:libs', function() {
+  return gulp
+    .src(npmdist(), { base: paths.base.node.dir })
+    .pipe(gulp.dest(paths.dist.libs.dir));
 });
 
 gulp.task('html', function() {
-  return gulp.src('src/**/*.html')
-      .pipe(gulp.dest('dist'));
+  return gulp
+    .src([
+      paths.src.html.files,
+      '!' + paths.src.tmp.files,
+      '!' + paths.src.partials.files
+    ])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file',
+      indent: true
+    }))
+    .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
+    .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
+    .pipe(useref())
+    .pipe(cached())
+    .pipe(gulpif('*.js', uglify()))
+    .pipe(gulpif('*.css', cleancss()))
+    .pipe(gulp.dest(paths.dist.base.dir));
 });
 
+gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:packageLock', 'clean:dist', 'copy:all', 'copy:libs'), 'scss', 'html'));
 
-// Watch Task
-gulp.task('watch', function() {
-  gulp.watch('src/**/*.svg', gulp.series('svg'));
-  gulp.watch('src/**/*.html', gulp.series('html'));
-  gulp.watch('*.scss', gulp.series('scss'));
-  gulp.watch('img/*.png', gulp.series('png'));
-});
-
-// Default Task
-gulp.task('default', gulp.series(gulp.parallel('styles', 'png','html','scripts','svg', 'scss', 'watch')));
+gulp.task('default', gulp.series(gulp.parallel('fileinclude', 'scss'), gulp.parallel('browsersync', 'watch')));
