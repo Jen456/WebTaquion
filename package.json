@@ -6,7 +6,7 @@
   "main": "gulpfile.js",
   "author": "Good Themes",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node server.js"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
