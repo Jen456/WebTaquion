@@ -1,5 +1,8 @@
 <!doctype html>
 <html lang="en">
+<style>
+
+</style>
   <head>
     @@include("partials/head.html", {
       "pageTitle": "Taquion"
@@ -54,7 +57,7 @@
               </a>
                 
             </div>
-            <p class="mb-4 col-lg-8"> No se requiere tarjeta de crédito </p>
+            <p class="text-secondary mb-4 col-lg-8"> No se requiere tarjeta de crédito </p>
           </div>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
@@ -126,20 +129,22 @@
 
     <!--  2 TARJETAS DE PRESENTACION 
     ================================================== -->   
-    <section class="py-12 py-md-2 border-bottom bg-gradient-light">
+    <section class=" pt-10 py-md-8 bg-gradient-light">
       <div class="container" data-aos="fade-up">
-      <div class="py-10 py-md-12 text-center  ">
+      <div class=" text-center  ">
         <h2 class="font-weight-bold "> Aplicaciones Disponibles </h2>
         </div>
-        <div class="card-group">
-        <div class="card bg-gradient-light">
+        <div class="card-group py-md-6"> <!-- separo hacia abajo -->  
+        <div class="card bg-gradient-light">    
           <img class="card-img-top" src="./assets/img/devices/macbook.png" alt="Card image cap">
           <div class="card-body">
             <h5 style="text-align: center;"><strong>WEB</strong><span style="color: #3366ff;">KION</span></h5>
             <p class="card-text" style="text-align: center;">  Con el seguimiento de tiempos en línea acceda a información valiosa, obteniendo informes en tiempo real.
             Personalice la configuración de la empresa y administre las hojas de tiempo de sus empleados.
             Función disponible sin costos adicionales.</p>
-            
+            <div class="pt-12 py-lg-12">  <!-- alineo hacia abajo --> 
+            <button type="button" class="col px-md-5 btn btn-info">Chequealo</button>
+            </div>
           </div>
           </div>
           <div class="card bg-gradient-light">
@@ -147,6 +152,10 @@
             <div class="card-body">
               <h5 style="text-align: center;"><strong>MOB</strong><span style="color: #3366ff;">KION</span></h5>
               <p class="card-text" style="text-align: center;">  Utilizamos tecnología de geolocalización empleados y administradores capturan, envían y aprueba el tiempo desde sus celulares, perfecta para personal que desenpeña sus tareas fuera. Además de contar con notificaciones automáticas que les recuerda a los empleados marcar, facilitando el intercambio de horarios. </p>
+              <div class="pt-12 py-lg-5">  <!-- alineo hacia abajo --> 
+              <button type="button" class="col px-md-5 btn btn-info">Recorrido</button>
+              </div>
+              
             </div>
           </div>
           <div class="card bg-gradient-light">
@@ -154,6 +163,9 @@
             <div class="card-body">
               <h5 style="text-align: center;"><strong>PAD</strong><span style="color: #3366ff;">KION</span></h5>
               <p class="card-text" style="text-align: center;">  La mejor forma para que los empleados marquen desde un lugar fijo. Sustituye a los tradicionales tarjeteros evitando las demoras o lecturas fallidas, funciona en cualquier computadora o tableta conectada a internet o LTE para lugares sin acceso a internet.  </p>
+              <div class="pt-12 py-lg-14">  <!-- alineo hacia abajo --> 
+             <button type="button" class="col px-md-5 btn btn-info">Cómo funciona</button>
+            </div>
             </div>
             </div>
           </div>
@@ -162,7 +174,7 @@
     </section>
     <!-- ABOUT
     ================================================== -->
-    <section class="pt-8 pt-md-8 ">
+    <section class="pt-8 py-md-4 ">
       
        <div class="card card-row white-lg">
         <div class="row no-gutters">
@@ -211,13 +223,13 @@
     </section>
     <!-- Agiliza, simplifica y ahorra dinero
     ================================================== -->
-    <section class="py-12 py-md-2 border-bottom bg-gradient-light">
-      <div class="container" data-aos="fade-up">
-      <div class="text-center ">
+    <section class="pt-12 py-md-10 bg-gradient-light">
+      <div class="container bg-gradient-light" data-aos="fade-up">
+      <div class="text-center">
         <h1 class="font-weight-bold"> Agiliza, simplifica y ahorra dinero </h1> <br><br>
       </div>
-      <div class="card-group">
-        <div class="card" >
+      <div class="card-group ">
+        <div class="card bg-gradient-light" >
           <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/calendariocaracteris.svg" width="200" height="100" alt="Card image cap">
           <div class="card-body text-center">
             <h5 class="card-title font-weight-bold">Programación</h5>
@@ -225,14 +237,14 @@
           </div>
           </div>
 
-          <div class="card">
+          <div class="card bg-gradient-light">
             <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/informescaracteris.svg" width="200" height="100" alt="Card image cap">
             <div class="card-body text-center">
               <h5 class="card-title font-weight-bold">Informes</h5>
               <p class="card-text">Obtenga información empresarial valiosa con informes interactivos en tiempo real, obtenga reportes y estadísticas por sucursal, por empleado, o de toda la organización dándole la información necesaria para que mejore la productividad.</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card bg-gradient-light">
             <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/mapagps.svg" width="200" height="100" alt="Card image cap">
             <div class="card-body text-center">
               <h5 class="card-title font-weight-bold ">GPS</h5>
@@ -244,7 +256,7 @@
         </div>
 
          <div class="card-group">
-        <div class="card ">
+        <div class="card  bg-gradient-light">
           <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/nubecaracteris.svg" width="200" height="100" alt="Card image cap">
           <div class="card-body text-center">
             <h5 class="card-title font-weight-bold">Almacenamiento en la nube</h5>
@@ -252,14 +264,14 @@
             
           </div>
           </div>
-          <div class="card">
+          <div class="card bg-gradient-light">
             <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/relojcaracteris.svg" width="200" height="100" alt="Card image cap">
             <div class="card-body text-center">
               <h5 class="card-title font-weight-bold">Cumplimiento laboral</h5>
               <p class="card-text">Los empleados pueden registrar su entrada o salida con un solo clic. Tómese un descanso, cambie los códigos de trabajo o agregue detalles de la hoja de tiempo al instante.</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card bg-gradient-light">
             <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/costoflexible.svg" width="200" height="100" alt="Card image cap">
             <div class="card-body text-center">
               <h5 class="card-title font-weight-bold">Costo flexible</h5>
@@ -270,14 +282,55 @@
         </div>
       </section>
 
-    <!-- PRICING
-    ================================================== -->
-    
- 
- 
 
+<!-- despedida
+    ================================================== -->
+    <section class="py-12 py-md-2 ">
+      <div class="container " data-aos="fade-up">
+        <div class="row align-items-center">
+          <div class="col-6 col-md-5 col-lg-4 order-md-2">
+            
+            <!-- Image -->
+            <img src="assets/img/illustrations/reunión.png" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
+
+          </div>
+          <div class="col-12 col-md-7 col-lg-6 order-md-1">
+            
+            <!-- Heading -->
+            <h1 class="display-6 text-center text-md-left">
+              Toda la información a tu  <br>
+              alcance desde cualquier <br>
+              dispositivo
+            </h1>
+
+            <!-- Text -->
+            <p class="lead text-center text-md-left text-muted mb-6 mb-lg-8">
+              Los empleados se registran de forma segura desde cualquier sitio de cliente o trabajo con nuestra aplicación móvil gratuita. <br>
+              Vea y administre hojas de tiempo detalladas desde la web o mientras viaja con su dispositivo móvil.
+            </p>
+                
+            <!-- Buttons -->
+            <div class="text-center text-md-left">
+              <a href="overview.html" class="btn btn-primary shadow lift mr-1">
+                View all pages <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i>
+              </a>
+              <a href="docs/index.html" class="btn btn-primary-soft lift">
+                Documentation
+              </a>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+        <br>
+        <br>
+        <br>
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- FOOTER
+    ================================================== -->
   
-  <footer class="py-8 py-md-11 bg-dark">
+  <footer class="py-10 py-md-11 bg-dark">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-4 col-lg-3">
@@ -373,6 +426,8 @@
     </div> <!-- / .row -->
   </div> <!-- / .container -->
 </footer>
+
+
 
     <!-- JAVASCRIPT
     ================================================== -->
