@@ -2210,14 +2210,6 @@ fieldset:disabled a.btn {
       -webkit-box-shadow: 0 0 0 0 rgba(144, 128, 241, 0.5);
               box-shadow: 0 0 0 0 rgba(144, 128, 241, 0.5); }
 
-
- .btn-group-blue {
-
-  color: #FFFFFF;
-    background-color: #335EEA;
-    border-color: #335EEA;
-  }
-
 .btn-warning {
   color: #2B354F;
   background-color: #FAD776;
@@ -13508,5 +13500,3 @@ body.compensate-for-scrollbar {
 @media (min-width: 992px) {
   .sidenav-right {
     right: 0; } }
-
-    

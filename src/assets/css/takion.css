@@ -1,0 +1,53 @@
+.btn-takion-purple {
+    color: #FFFFFF;
+    background-color: #C2CFF9;
+    border-color: #C2CFF9;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+    .btn-takion-purple:hover {
+      color: #FFFFFF;
+      background-color: #C2CFF9;
+      border-color: #C2CFF9; }
+    .btn-takion-purple:focus, .btn-takion-purple.focus {
+      -webkit-box-shadow: none, 0 0 0 0 #C2CFF9;
+              box-shadow: none, 0 0 0 0 #C2CFF9; }
+    .btn-takion-purple.disabled, .btn-takion-purple:disabled {
+      color: #FFFFFF;
+      background-color: #C2CFF9;
+      border-color: #C2CFF9; }
+    .btn-takion-purple:not(:disabled):not(.disabled):active, .btn-takion-purple:not(:disabled):not(.disabled).active,
+    .show > .btn-takion-purple.dropdown-toggle {
+      color: #FFFFFF;
+      background-color: rgba(194, 207, 249, 0.699);
+      border-color: rgba(194, 207, 249, 0.699); }
+      .btn-takion-purple:not(:disabled):not(.disabled):active:focus, .btn-takion-purple:not(:disabled):not(.disabled).active:focus,
+      .show > .btn-takion-purple.dropdown-toggle:focus {
+        -webkit-box-shadow: 0 0 0 0 #C2CFF9;
+                box-shadow: 0 0 0 0 #C2CFF9; }
+
+.btn-takion-blue {
+    color: #FFFFFF;
+    background-color: #335EEA;
+    border-color: #335EEA;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+    .btn-takion-blue:hover {
+    color: #FFFFFF;
+    background-color: #335EEA;
+    border-color: rgb(162, 174, 214); }
+    .btn-takion-blue:focus, .btn-takion-blue.focus {
+    -webkit-box-shadow: none, 0 0 0 0 #335EEA;
+    box-shadow: none, 0 0 0 0 #335EEA }
+    .btn-takion-blue.disabled, .btn-takion-blue:disabled {
+    color: #FFFFFF;
+    background-color: #335EEA;
+    border-color: #335EEA; }
+    .btn-takion-blue:not(:disabled):not(.disabled):active, .btn-takion-blue:not(:disabled):not(.disabled).active,
+    .show > .btn-takion-blue.dropdown-toggle {
+    color: #FFFFFF;
+    background-color: #335EEA;
+    border-color: #335EEA; }
+    .btn-takion-blue:not(:disabled):not(.disabled):active:focus, .btn-takion-blue:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-takion-blue.dropdown-toggle:focus {
+    -webkit-box-shadow: 0 0 0 0 #335EEA;
+    box-shadow: 0 0 0 0 #335EEA; }

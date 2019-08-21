@@ -1,14 +1,11 @@
 <!doctype html>
 <html lang="en">
-<style>
 
-</style>
   <head>
     @@include("partials/head.html", {
       "pageTitle": "Taquion"
     })
-      <link rel="stylesheet" href="animate.min.css">
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/takion.css">
   </head>
   <body>
 
@@ -24,7 +21,6 @@
     })
      <!-- colors
     ================================================== -->
-    
 
     <!-- WELCOME
     ================================================== -->
@@ -55,7 +51,7 @@
               
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
               <div style=""class="input-group-prepend">
-                <button type="button" class="btn-group-blue">Prueba Gratis TAKIÓN</button>
+                <a href="#" button type="button" class="btn btn-takion-blue">Prueba Gratis TAKIÓN</a>
               </div>
             </div>
           </form>
@@ -77,7 +73,6 @@
             <div class="icon text-primary mb-3">
               @@include("assets/img/icons/duotone-icons/General/Settings-1.svg")
             </div>
-
             <!-- Heading -->
             <h3>
               Nómina Fácil
@@ -90,7 +85,7 @@
             </p>
 
           </div>
-          <div class="col-12 col-md-4 text-center data-aos="fade-up" data-aos-delay="50">
+          <div class="col-12 col-md-4 text-center" data-aos="fade-up" data-aos-delay="50">
 
             <!-- Icon -->
             <div class="icon text-primary mb-3">
@@ -132,7 +127,7 @@
 
     <!--  2 TARJETAS DE PRESENTACION 
     ================================================== -->   
-    <section class=" pt-10 py-md-8 bg-gradient-light">
+    <section class=" pt-10 py-md-4 bg-gradient-light">
       <div class="container" data-aos="fade-up">
       <div class=" text-center  ">
         <h2 class="font-weight-bold "> Aplicaciones Disponibles </h2>
@@ -146,7 +141,7 @@
             Personalice la configuración de la empresa y administre las hojas de tiempo de sus empleados.
             Función disponible sin costos adicionales.</p>
             <div class="pt-12 py-lg-12">  <!-- alineo hacia abajo --> 
-            <button type="button" class="col px-md-5 btn btn-info">Chequealo</button>
+            <button type="button" class="col px-md-5 btn btn-takion-purple">Chequealo</button>
             </div>
           </div>
           </div>
@@ -156,7 +151,7 @@
               <h5 style="text-align: center;"><strong>MOB</strong><span style="color: #3366ff;">KION</span></h5>
               <p class="card-text" style="text-align: center;">  Utilizamos tecnología de geolocalización empleados y administradores capturan, envían y aprueba el tiempo desde sus celulares, perfecta para personal que desenpeña sus tareas fuera. Además de contar con notificaciones automáticas que les recuerda a los empleados marcar, facilitando el intercambio de horarios. </p>
               <div class="pt-12 py-lg-5">  <!-- alineo hacia abajo --> 
-              <button type="button" class="col px-md-5 btn btn-info">Recorrido</button>
+              <button type="button" class="col px-md-5 btn btn-takion-purple">Recorrido</button>
               </div>
               
             </div>
@@ -167,7 +162,7 @@
               <h5 style="text-align: center;"><strong>PAD</strong><span style="color: #3366ff;">KION</span></h5>
               <p class="card-text" style="text-align: center;">  La mejor forma para que los empleados marquen desde un lugar fijo. Sustituye a los tradicionales tarjeteros evitando las demoras o lecturas fallidas, funciona en cualquier computadora o tableta conectada a internet o LTE para lugares sin acceso a internet.  </p>
               <div class="pt-12 py-lg-14">  <!-- alineo hacia abajo --> 
-             <button type="button" class="col px-md-5 btn btn-info">Cómo funciona</button>
+             <button type="button" class="col px-md-5 btn btn-takion-purple">Cómo funciona</button>
             </div>
             </div>
             </div>
@@ -175,19 +170,17 @@
         </div>
     </div>
     </section>
-    <!-- ABOUT
-    ================================================== -->
-    <section class="pt-4 py-md-8">
+    <!-- ABOUT ================================================== -->
+     <section class=" pt-10 py-md-8 ">
        <div class="card card-row">
         <div class="row no-gutters">
-          <a class="col-8 col-md-6 bg-cover card-img-left" style="background-image: url(assets/img/photos/photo-2.jpg);" href="#!">
+          <a class="col-4 col-md-6 bg-cover card-img-left" style="background-image: url(assets/img/photos/photo-2.jpg);" href="#!">
             <!-- Image (placeholder) -->
             <img src="assets/img/photos/photo-2.jpg" alt="..." class="img-fluid d-md-none invisible">
             <!-- Shape -->
             <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
               @@include("assets/img/shapes/curves/curve-4.svg")
             </div>
-
           </a>
           <div class="col-12 col-md-6 order-md-1">
 
@@ -285,7 +278,7 @@
 
 <!-- despedida
     ================================================== -->
-    <section class="py-12 py-md-2 ">
+    <section class="py-12 py-md-4 ">
       <div class="container " data-aos="fade-up">
         <div class="row align-items-center">
           <div class="col-6 col-md-5 col-lg-4 order-md-2">
@@ -310,13 +303,10 @@
             </p>
                 
             <!-- Buttons -->
-            <div class="text-center text-md-left">
-              <a href="overview.html" class="btn btn-primary shadow lift mr-1">
-                View all pages <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i>
-              </a>
-              <a href="docs/index.html" class="btn btn-primary-soft lift">
-                Documentation
-              </a>
+            <div class="text-center text-md-left ">
+              <img src="assets/img/illustrations/button-play.png"  alt="Card image cap" height="50" data-aos="fade-up" data-aos-delay="100">
+              <img class="px-6" src="assets/img/illustrations/button-app.png"  alt="Card image cap" height="50" data-aos="fade-up" data-aos-delay="100">
+    
             </div>
 
           </div>

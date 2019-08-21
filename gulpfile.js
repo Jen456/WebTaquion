@@ -102,7 +102,7 @@ gulp.task('watch', function() {
 
 gulp.task('scss', function() {
   return gulp
-    .src(paths.src.scss.main)
+    .src(paths.src.scss.main, {allowEmpty:true})
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.src.css.dir))
