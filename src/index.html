@@ -1,38 +1,32 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     @@include("partials/head.html", {
       "pageTitle": "Taquion"
     })
     <link rel="stylesheet" type="text/css" href="../assets/css/takion.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/flexboxgrid.css">
   </head>
-  <body>
-
-    <!-- MODALS
-    ================================================== -->
-    @@include("partials/modals.html")
-    
-    <!-- NAVBAR
-    ================================================== -->
-    @@include("partials/navbar.html", {
-      "classList": "navbar-light bg-soft",
-      "type": "boxed"
-    })
-     <!-- colors
-    ================================================== -->
-
+<body>
+  <!-- MODALS
+  ================================================== -->
+  @@include("partials/modals.html")
+  <!-- NAVBAR
+  ================================================== -->
+  @@include("partials/navbar.html", {
+    "classList": "navbar-light bg-soft",
+    "type": "boxed"
+  })
     <!-- WELCOME
     ================================================== -->
-    <<section class="pt-4 pt-md-11">
+    <section class="pt-4 pt-md-11">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-4 col-lg-6 order-md-1">
             <!-- Image -->
             <img src="assets/img/illustrations/illustration-10.png" class="img-fluid mw-md-130 mw-lg-100 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-            </div>
-
-            <div class="col-12 col-md-4 col-lg-6 order-md-2" data-aos="fade-up">
+          </div>
+          <div class="col-12 col-md-4 col-lg-6 order-md-2" data-aos="fade-up">
             <!-- Heading -->
             <h1 class="display-3 text-center text-md-left">
               Acceso fácil y seguro <br>
@@ -43,32 +37,25 @@
               Gestione sin esfuerzo el tiempo de los empleados en nuestra aplicación web y móbil.
              Vea y administre hojas de tiempo detalladas desde la web o mientras viaja con su dispositivo
             </p>
-                
             <!-- Buttons -->
             <form>
-            
-            <div class="btn-group input-group mb-3">
-              
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              <div style=""class="input-group-prepend">
-                <a href="#" button type="button" class="btn btn-takion-blue">Prueba Gratis TAKIÓN</a>
+              <div class="btn-group input-group mb-3">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <div style=""class="input-group-prepend">
+                  <a href="#" button type="button" class="btn btn-takion-blue">Prueba Gratis TAKIÓN</a>
+                </div>
               </div>
-            </div>
-          </form>
-            <div class="px-12 py-md-4" >
-            <p class="text-secondary"> No se requiere tarjeta de crédito </p> </div>
-          </div>
+            </form>
+            <div class="col-xs-6 col-sm-4">No se requiere tarjeta de crédito</div>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
     </section>
-
     <!-- FEATURES
     ================================================== -->
     <section class="py-12 py-md-12 border-bottom" >
       <div class="container" >
         <div class="row ">
           <div class="col-12 col-md-4 text-center">
-            
             <!-- Icon -->
             <div class="icon text-primary mb-3">
               @@include("assets/img/icons/duotone-icons/General/Settings-1.svg")
@@ -77,44 +64,35 @@
             <h3>
               Nómina Fácil
             </h3>
-
             <!-- Text -->
             <p class="text-muted mb-6 mb-md-0">
               Adios a los ajustes de nómina manual y errores de nómina costosos.
               <br>¡Agilice la administración y ahorre!
             </p>
-
           </div>
           <div class="col-12 col-md-4 text-center" data-aos="fade-up" data-aos-delay="50">
-
             <!-- Icon -->
             <div class="icon text-primary mb-3">
               @@include("assets/img/icons/duotone-icons/Layout/Layout-arrange.svg")
             </div>
-
             <!-- Heading -->
             <h3>
               Ahorra tiempo
             </h3>
-
             <!-- Text -->
             <p class="text-muted mb-6 mb-md-0">
               Se terminó el tiempo perdido en el cálculo y la resolución de horas extraordinarias para la nómina; El motor de tasas de pago lo hace por usted, para que pueda volver a lo que mejor hace.
             </p>
-
           </div>
-          <div class="col-12 col-md-4 text-center data-aos="fade-up" data-aos-delay="100">
-              
+          <div class="col-12 col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
             <!-- Icon -->
             <div class="icon text-primary mb-3">
               @@include("assets/img/icons/duotone-icons/Code/Code.svg")
             </div>
-
             <!-- Heading -->
             <h3>
               Configúralo y olvídalo
             </h3>
-
             <!-- Text -->
             <p class="text-muted mb-0">
               Utilice el motor de tasas de pago para preestablecer las tasas de horas extra personalizadas, las tasas de pago, las tasas de vacaciones y los cálculos de nómina. ¡Takión hace el resto!
@@ -125,53 +103,52 @@
       </div> <!-- / .container -->
     </section>
 
-    <!--  2 TARJETAS DE PRESENTACION 
-    ================================================== -->   
+    <!--  2 TARJETAS DE PRESENTACION
+    ================================================== -->
     <section class=" pt-10 py-md-4 bg-gradient-light">
       <div class="container" data-aos="fade-up">
-      <div class=" text-center  ">
-        <h2 class="font-weight-bold "> Aplicaciones Disponibles </h2>
-        </div>
-        <div class="card-group py-md-10"> <!-- separo hacia abajo -->  
-        <div class="card bg-gradient-light">    
-          <img class="card-img-top" src="./assets/img/devices/macbook.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 style="text-align: center;"><strong>WEB</strong><span style="color: #3366ff;">KION</span></h5>
-            <p class="card-text" style="text-align: center;">  Con el seguimiento de tiempos en línea acceda a información valiosa, obteniendo informes en tiempo real.
-            Personalice la configuración de la empresa y administre las hojas de tiempo de sus empleados.
-            Función disponible sin costos adicionales.</p>
-            <div class="pt-12 py-lg-12">  <!-- alineo hacia abajo --> 
-            <button type="button" class="col px-md-5 btn btn-takion-purple">Chequealo</button>
-            </div>
+        <div class=" text-center  ">
+          <h2 class="font-weight-bold "> Aplicaciones Disponibles </h2>
           </div>
-          </div>
-          <div class="card bg-gradient-light">
-            <img class="card-img-top mx-auto d-block" style="width:120px" src="assets/img/devices/iphonex.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 style="text-align: center;"><strong>MOB</strong><span style="color: #3366ff;">KION</span></h5>
-              <p class="card-text" style="text-align: center;">  Utilizamos tecnología de geolocalización empleados y administradores capturan, envían y aprueba el tiempo desde sus celulares, perfecta para personal que desenpeña sus tareas fuera. Además de contar con notificaciones automáticas que les recuerda a los empleados marcar, facilitando el intercambio de horarios. </p>
-              <div class="pt-12 py-lg-5">  <!-- alineo hacia abajo --> 
-              <button type="button" class="col px-md-5 btn btn-takion-purple">Recorrido</button>
+          <div class="card-group py-md-10"> <!-- separo hacia abajo -->
+            <div class="card bg-gradient-light">
+              <img class="card-img-top" src="./assets/img/devices/macbook.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 style="text-align: center;"><strong>WEB</strong><span style="color: #3366ff;">KION</span></h5>
+                <p class="card-text" style="text-align: center;">  Con el seguimiento de tiempos en línea acceda a información valiosa, obteniendo informes en tiempo real.
+                Personalice la configuración de la empresa y administre las hojas de tiempo de sus empleados.
+                Función disponible sin costos adicionales.</p>
+                <div class="pt-12 py-lg-12">  <!-- alineo hacia abajo -->
+                <button type="button" class="col px-md-5 btn btn-takion-purple">Chequealo</button>
+                </div>
               </div>
-              
             </div>
-          </div>
-          <div class="card bg-gradient-light">
-            <img class="card-img-top mx-auto d-block" style="width:250px" src="assets/img/devices/tablet.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 style="text-align: center;"><strong>PAD</strong><span style="color: #3366ff;">KION</span></h5>
-              <p class="card-text" style="text-align: center;">  La mejor forma para que los empleados marquen desde un lugar fijo. Sustituye a los tradicionales tarjeteros evitando las demoras o lecturas fallidas, funciona en cualquier computadora o tableta conectada a internet o LTE para lugares sin acceso a internet.  </p>
-              <div class="pt-12 py-lg-14">  <!-- alineo hacia abajo --> 
-             <button type="button" class="col px-md-5 btn btn-takion-purple">Cómo funciona</button>
+            <div class="card bg-gradient-light">
+              <img class="card-img-top mx-auto d-block" style="width:120px" src="assets/img/devices/iphonex.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 style="text-align: center;"><strong>MOB</strong><span style="color: #3366ff;">KION</span></h5>
+                <p class="card-text" style="text-align: center;">  Utilizamos tecnología de geolocalización empleados y administradores capturan, envían y aprueba el tiempo desde sus celulares, perfecta para personal que desenpeña sus tareas fuera. Además de contar con notificaciones automáticas que les recuerda a los empleados marcar, facilitando el intercambio de horarios. </p>
+                <div class="pt-12 py-lg-5">  <!-- alineo hacia abajo -->
+                <button type="button" class="col px-md-5 btn btn-takion-purple">Recorrido</button>
+                </div>
+              </div>
             </div>
+            <div class="card bg-gradient-light">
+              <img class="card-img-top mx-auto d-block" style="width:250px" src="assets/img/devices/tablet.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 style="text-align: center;"><strong>PAD</strong><span style="color: #3366ff;">KION</span></h5>
+                <p class="card-text" style="text-align: center;">  La mejor forma para que los empleados marquen desde un lugar fijo. Sustituye a los tradicionales tarjeteros evitando las demoras o lecturas fallidas, funciona en cualquier computadora o tableta conectada a internet o LTE para lugares sin acceso a internet.  </p>
+                <div class="pt-12 py-lg-14">  <!-- alineo hacia abajo -->
+              <button type="button" class="col px-md-5 btn btn-takion-purple">Cómo funciona</button>
+              </div>
+              </div>
+              </div>
             </div>
-            </div>
-          </div>
         </div>
     </div>
     </section>
     <!-- ABOUT ================================================== -->
-     <section class=" pt-10 py-md-8 ">
+     <section class="col-xs-12 col-md-8">
        <div class="card card-row">
         <div class="row no-gutters">
           <a class="col-4 col-md-6 bg-cover card-img-left" style="background-image: url(assets/img/photos/photo-2.jpg);" href="#!">
@@ -183,11 +160,9 @@
             </div>
           </a>
           <div class="col-12 col-md-6 order-md-1">
-
             <!-- Body -->
             <div class="card-body">
               <blockquote class="blockquote mb-0 text-center">
-                
                 <!-- Text -->
                 <h2 class="mb-5 mb-md-7">
                   Ahorre miles nóminas mediante el
@@ -199,37 +174,32 @@
                   Con Takión hacemos que el trabajo sea más eficiente ahorrando tiempo y costos, todo manejado desde la web o la aplicación de forma segura, rápida y sencilla.
                   Gracias a el almacenamiento en la nube la información se respaldará de forma automática y centralizada, disponible los 365 días le año.
                 </h3>
-
                 <!-- Footer -->
                 <footer class="blockquote-footer">
                   <span class="h6 text-uppercase">-- Taquion</span>
                 </footer>
-
               </blockquote>
             </div>
-
           </div>
-
         </div>
       </div>
-
     </section>
     <!-- Agiliza, simplifica y ahorra dinero
     ================================================== -->
     <section class="pt-12 py-md-10 bg-gradient-light">
       <div class="container bg-gradient-light" data-aos="fade-up">
       <div class="text-center">
-        <h1 class="font-weight-bold"> Agiliza, simplifica y ahorra dinero </h1> <br><br>
+        <h1 class="py-md-10 font-weight-bold"> Agiliza, simplifica y ahorra dinero </h1>
       </div>
-      <div class="card-group ">
-        <div class="card bg-gradient-light" >
-          <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/calendariocaracteris.svg" width="200" height="100" alt="Card image cap">
-          <div class="card-body text-center">
-            <h5 class="card-title font-weight-bold">Programación</h5>
-            <p class="card-text">Automatice reglas de horas extra, personalice las tasas de pago y programe cálculos complejos de horas extras según sus necesidades. Edite, publique y comparta de forma rápida y sencilla el programa con su equipo.</p>
+      <!-- Primer bloque de cards -->
+         <div class="card-group ">
+            <div class="card bg-gradient-light" >
+              <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/calendariocaracteris.svg" width="200" height="100" alt="Card image cap">
+              <div class="card-body text-center">
+                <h5 class="card-title font-weight-bold">Programación</h5>
+                <p class="card-text">Automatice reglas de horas extra, personalice las tasas de pago y programe cálculos complejos de horas extras según sus necesidades. Edite, publique y comparta de forma rápida y sencilla el programa con su equipo.</p>
+            </div>
           </div>
-          </div>
-
           <div class="card bg-gradient-light">
             <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/informescaracteris.svg" width="200" height="100" alt="Card image cap">
             <div class="card-body text-center">
@@ -244,18 +214,16 @@
               <p class="card-text">Descargue la aplicación Android o iOS para rastrear, enviar y aprobar el tiempo de los empleados desde prácticamente cualquier lugar.
               La entrada de tiempo del empleado es segura y detallada con reconocimiento facial instantáneo,huella digital o código Qr.</p>
             </div>
-          </div>
-          
+       </div>
         </div>
-
+         <!-- Segundo bloque de cards -->
          <div class="card-group">
-        <div class="card  bg-gradient-light">
-          <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/nubecaracteris.svg" width="200" height="100" alt="Card image cap">
-          <div class="card-body text-center">
-            <h5 class="card-title font-weight-bold">Almacenamiento en la nube</h5>
-            <p class="card-text"> Con los informes basados ​​en la nube, puede revisar el tiempo de los empleados y procesar la nómina desde cualquier dispositivo del mundo.</p>
-            
-          </div>
+          <div class="card  bg-gradient-light">
+            <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/nubecaracteris.svg" width="200" height="100" alt="Card image cap">
+            <div class="card-body text-center">
+              <h5 class="card-title font-weight-bold">Almacenamiento en la nube</h5>
+              <p class="card-text"> Con los informes basados ​​en la nube, puede revisar el tiempo de los empleados y procesar la nómina desde cualquier dispositivo del mundo.</p>
+            </div>
           </div>
           <div class="card bg-gradient-light">
             <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/relojcaracteris.svg" width="200" height="100" alt="Card image cap">
@@ -271,158 +239,125 @@
               <p class="card-text">El costo del servicio es variable según la cantidad de personal que la empresa tenga. Esto lo hace accesible para los pequeños negocios, hasta las grandes compañías.</p>
             </div>
           </div>
-          
         </div>
       </section>
-
-
 <!-- despedida
     ================================================== -->
-    <section class="py-12 py-md-4 ">
+    <section class="px-6 py-md-5">
       <div class="container " data-aos="fade-up">
         <div class="row align-items-center">
           <div class="col-6 col-md-5 col-lg-4 order-md-2">
-            
             <!-- Image -->
             <img src="assets/img/illustrations/reunión.png" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-
           </div>
           <div class="col-12 col-md-7 col-lg-6 order-md-1">
-            
             <!-- Heading -->
             <h1 class="display-6 text-center text-md-left">
               Toda la información a tu  <br>
               alcance desde cualquier <br>
               dispositivo
             </h1>
-
             <!-- Text -->
             <p class="lead text-center text-md-left text-muted mb-6 mb-lg-8">
               Los empleados se registran de forma segura desde cualquier sitio de cliente o trabajo con nuestra aplicación móvil gratuita. <br>
               Vea y administre hojas de tiempo detalladas desde la web o mientras viaja con su dispositivo móvil.
             </p>
-                
             <!-- Buttons -->
             <div class="text-center text-md-left ">
               <img src="assets/img/illustrations/button-play.png"  alt="Card image cap" height="50" data-aos="fade-up" data-aos-delay="100">
               <img class="px-6" src="assets/img/illustrations/button-app.png"  alt="Card image cap" height="50" data-aos="fade-up" data-aos-delay="100">
-    
             </div>
-
           </div>
         </div> <!-- / .row -->
-        <br>
-        <br>
-        <br>
       </div> <!-- / .container -->
     </section>
-
     <!-- FOOTER
     ================================================== -->
-  
-  <footer class="py-10 py-md-11 bg-dark">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-4 col-lg-3">
-        
-        <!-- Brand -->
-        <h2><span class="badge badge-secondary">TAKIÓN</span></h2>
+    <footer class="py-10 py-md-10 bg-dark">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-4 col-lg-3">
+              <!-- Brand -->
+              <h2><span class="badge badge-secondary">TAKIÓN</span></h2>
+              <!-- Text -->
+              <p class="text-gray-700 mb-2">
+                A better way to build.
+              </p>
+              <!-- Social -->
+              <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
+                <li class="list-inline-item list-social-item mr-3">
+                  <a href="#!" class="text-decoration-none">
+                    <img src="../assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
+                  </a>
+                </li>
+                <li class="list-inline-item list-social-item mr-3">
+                  <a href="#!" class="text-decoration-none">
+                    <img src="../assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
+                  </a>
+                </li>
+                <li class="list-inline-item list-social-item mr-3">
+                  <a href="#!" class="text-decoration-none">
+                    <img src="../assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
+                  </a>
+                </li>
+                <li class="list-inline-item list-social-item">
+                  <a href="#!" class="text-decoration-none">
+                    <img src="../assets/img/icons/social/pinterest.svg" class="list-social-icon" alt="...">
+                  </a>
+                </li>
+              </ul>
 
-        <!-- Text -->
-        <p class="text-gray-700 mb-2">
-          A better way to build.
-        </p>
-
-        <!-- Social -->
-        <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
-          <li class="list-inline-item list-social-item mr-3">
-            <a href="#!" class="text-decoration-none">
-              <img src="../assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
-            </a>
-          </li>
-          <li class="list-inline-item list-social-item mr-3">
-            <a href="#!" class="text-decoration-none">
-              <img src="../assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
-            </a>
-          </li>
-          <li class="list-inline-item list-social-item mr-3">
-            <a href="#!" class="text-decoration-none">
-              <img src="../assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
-            </a>
-          </li>
-          <li class="list-inline-item list-social-item">
-            <a href="#!" class="text-decoration-none">
-              <img src="../assets/img/icons/social/pinterest.svg" class="list-social-icon" alt="...">
-            </a>
-          </li>
-        </ul>
-
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        
-        <!-- Heading -->
-        <h6 class="font-weight-bold text-uppercase text-gray-700">
-          Productos
-        </h6>
-
-        <!-- List -->
-        
-
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        
-        <!-- Heading -->
-        <h6 class="font-weight-bold text-uppercase text-gray-700">
-          Servicios
-        </h6>
-
-        <!-- List -->
-        
-
-      </div>
-      <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
-        
-        <!-- Heading -->
-        <h6 class="font-weight-bold text-uppercase text-gray-700">
-          Relaciones
-        </h6>
-
-        <!-- List -->
-        
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        
-        <!-- Heading -->
-        <h6 class="font-weight-bold text-uppercase text-gray-700">
-          Legal
-        </h6>
-
-        <!-- List -->
-        <ul class="list-unstyled text-muted mb-0">
-          <li class="mb-3">
-            <a href="#!" class="text-reset">
-              Políticas de privacidad
-            </a>
-          </li>
-          <li class="mb-3">
-            <a href="#!" class="text-reset">
-              Términos de uso
-            </a>
-          </li>
-          
-        </ul>
-
-      </div>
-    </div> <!-- / .row -->
-  </div> <!-- / .container -->
-</footer>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <!-- Heading -->
+              <h6 class="font-weight-bold text-uppercase text-gray-700">
+                Productos
+              </h6>
+              <!-- List -->
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <!-- Heading -->
+              <h6 class="font-weight-bold text-uppercase text-gray-700">
+                Servicios
+              </h6>
+              <!-- List -->
+            </div>
+            <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+              <!-- Heading -->
+              <h6 class="font-weight-bold text-uppercase text-gray-700">
+                Relaciones
+              </h6>
+              <!-- List -->
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <!-- Heading -->
+              <h6 class="font-weight-bold text-uppercase text-gray-700">
+                Legal
+              </h6>
+              <!-- List -->
+              <ul class="list-unstyled text-muted mb-0">
+                <li class="mb-3">
+                  <a href="#!" class="text-reset">
+                    Políticas de privacidad
+                  </a>
+                </li>
+                <li class="mb-3">
+                  <a href="#!" class="text-reset">
+                    Términos de uso
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+  </footer>
 
 
 
     <!-- JAVASCRIPT
     ================================================== -->
     @@include("partials/scripts.html")
-      
+
   </body>
 
 

@@ -51,3 +51,14 @@
     .show > .btn-takion-blue.dropdown-toggle:focus {
     -webkit-box-shadow: 0 0 0 0 #335EEA;
     box-shadow: 0 0 0 0 #335EEA; }
+
+
+    input:not(:placeholder-shown) {
+      background-color:  #C2CFF9!important;
+   }
+   
+   
+   input:placeholder-shown {
+      color: #FFFFFF;
+      background-color:  #C2CFF9!important;
+   }
