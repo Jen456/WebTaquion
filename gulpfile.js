@@ -15,7 +15,8 @@ const npmdist = require('gulp-npm-dist');
 const replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
-const useref = require('gulp-useref');
+const minifyHtml = require('gulp-minify-html');
+
 
 // Define paths
 const paths = {
@@ -45,28 +46,38 @@ const paths = {
     },
     css:    {
       dir:    './src/assets/css',
-      files:  './src/assets/css/**/*'
+      files:  './src/assets/**/*.css'
     },
     html:   {
-      dir:    './src',
+      dir:    'src/**/*',
       files:  './src/**/*.html',
     },
     img:    {
       dir:    './src/assets/img',
-      files:  './src/assets/img/**/*',
+      files:  './src/assets/**/*',
     },
     js:     {
       dir:    './src/assets/js',
-      files:  './src/assets/js/**/*'
+      files:  './src/assets/**/*',
+      main:   './src/assets/**/*.js'
     },
     partials:   {
       dir:    './src/partials',
-      files:  './src/partials/**/*'
+      files:  './src/partials/**/*.html'
     },
     scss:   {
       dir:    './src/assets/scss',
-      files:  './src/assets/scss/**/*',
-      main:   './src/assets/scss/*.scss'
+      files:  './src/assets/**/*',
+      main:   './src/assets/**/*.scss'
+    },
+    svg:   {
+      dir:    './src/assets/svg',
+      files:  './src/assets/**/*',
+      main:   './src/assets/**/*.svg'
+    },
+    fonts:   {
+      dir:    './src/assets/fonts',
+      files:  './src/assets/**/*',
     },
     tmp:    {
       dir:    './src/.tmp',
@@ -100,13 +111,32 @@ gulp.task('watch', function() {
   gulp.watch([paths.src.html.files, paths.src.partials.files], gulp.series('fileinclude', 'browsersyncReload'));
 });
 
+
 gulp.task('scss', function() {
   return gulp
     .src(paths.src.scss.main, {allowEmpty:true})
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(gulp.dest(paths.src.css.dir))
+    .pipe(gulp.dest(paths.dist.base.dir))
     .pipe(browsersync.stream());
+});
+
+gulp.task('js', function() {
+  return gulp
+    .src(paths.src.js.main, {allowEmpty:true})
+    .pipe(gulp.dest(paths.dist.base.dir));
+});
+
+gulp.task('svg', function() {
+  return gulp
+    .src(paths.src.svg.main, {allowEmpty:true})
+    .pipe(gulp.dest(paths.dist.base.dir));
+});
+
+gulp.task('fonts', function() {
+  return gulp
+    .src(paths.src.fonts.files, {allowEmpty:true})
+    .pipe(gulp.dest(paths.dist.base.dir));
 });
 
 gulp.task('fileinclude', function(callback) {
@@ -123,6 +153,7 @@ gulp.task('fileinclude', function(callback) {
     }))
     .pipe(cached())
     .pipe(gulp.dest(paths.src.tmp.dir));
+    
 });
 
 gulp.task('clean:tmp', function(callback) {
@@ -160,27 +191,27 @@ gulp.task('copy:libs', function() {
     .pipe(gulp.dest(paths.dist.libs.dir));
 });
 
-gulp.task('html', function() {
+gulp.task('html', function(callback) {
   return gulp
     .src([
       paths.src.html.files,
       '!' + paths.src.tmp.files,
-      '!' + paths.src.partials.files
-    ])
+      '!' + paths.src.partials.files,
+     ])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file',
       indent: true
     }))
-    .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
-    .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
-    .pipe(useref())
+    .pipe(replace(/src="([^"]*)"/g, 'src="$$href(\'$1\')"'))
+    .pipe(replace(/href="([^"]*)"/g, 'href="$$href(\'$1\')"'))
     .pipe(cached())
     .pipe(gulpif('*.js', uglify()))
+    .pipe(minifyHtml())
     .pipe(gulpif('*.css', cleancss()))
     .pipe(gulp.dest(paths.dist.base.dir));
 });
 
-gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:packageLock', 'clean:dist', 'copy:all', 'copy:libs'), 'scss', 'html'));
+gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:packageLock', 'clean:dist', 'copy:all', 'copy:libs'), 'scss', 'html','js','svg','fileinclude','fonts'));
 
 gulp.task('default', gulp.series(gulp.parallel('fileinclude', 'scss'), gulp.parallel('browsersync', 'watch')));
