@@ -4,7 +4,6 @@
     @@include("partials/head.html", {
       "pageTitle": "Landkit"
     })
-    <link rel="stylesheet" type="text/css" href="../assets/css/navbar.css">
   </head>
   <body class="bg-light">
 
@@ -14,18 +13,10 @@
     
     <!-- NAVBAR
     ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
-
-        <div class="collapse navbar-collapse" id="navMain">
-            <ul class="nav navbar-nav pull-right">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services and Pricing</a></li> 
-                <li><a href="#">Contact Us</a></li> 
-            </ul>
-        </div>
-    </div>
-
+    @@include("partials/navbar.html", {
+      "classList": "navbar-dark ",
+      "type": "boxed"
+    })
 
     <!-- WELCOME
     ================================================== -->
