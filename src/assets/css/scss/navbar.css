@@ -1,58 +1,157 @@
-section
-{
-  background:yellow;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
-.banner
-{
-  background:red;
-  min-height:200px;
+img{
+  max-width:100%;
 }
-.banner .row
-{
+h2{
+  font-size:2.5em;
+}
+.container{
+  width:90%;
+  margin:auto;
+}
+header{
+  color:#fff;
+  position:absolute;
+  display:flex;
+  flex-flow: row wrap;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:9;
+}
+header .container{
+  display:flex;
+  flex-flow: row wrap;
+  align-items:center;
+  padding:15px 0;
+}
+.logo{
+  font-size:20px;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+.logo a{
+  color:#fff;
+  text-decoration:none;
+}
+nav {
+    justify-content: flex-end;
+    display: flex;
+    flex: 2 auto;
+}
+nav ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction: row;
+}
+nav ul li{
+  padding:0.5em;
+}
+nav ul li a{
+  color:#fff;
+  text-decoration:none;
+  display:inline-block;
+}
+section{
+  padding:150px 0;
+}
+.hero-banner{
+background:url(https://images.unsplash.com/photo-1517946264308-1a7ea8abb6e0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=add9d7ca772d122fb699bb1790d89a93) no-repeat center center;
+  background-size: cover;
+  height:100vh;
+  display:flex;
+  align-items:center;
   text-align:center;
-  margin-top:50px;
+  position:relative;
+  z-index:0;
 }
-.banner h1
-{
-  color:white;
+.hero-banner:after{
+  content:"";
+  display:block;
+  background:rgba(0,0,0,0.5);
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
 }
-
-
-
-/***********************************************************************
-*  OPAQUE NAVBAR SECTION
-***********************************************************************/
-.opaque-navbar {
-    background-color: rgba(0,0,0,0.5);
-  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
-    height: 60px;
-    border-bottom: 0px;
-    transition: background-color .5s ease 0s;
+.hero-banner h2{
+  color:#fff;
+  position:relative;
+  z-index:1;
 }
-
-.opaque-navbar.opaque {
-    background-color: black;
-    height: 60px;
-    transition: background-color .5s ease 0s;
+.about{
+  text-align:center;
+  line-height:2;
 }
-
-ul.dropdown-menu {
-    background-color: black;
+.portfolio{
+  text-align:center;
+  line-height:2;
+  background:#f1f1f1;
 }
-
-
-@media (max-width: 992px) {
-  body
-  {
-    background:red;
+header.fixed {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity:0;
+  visibility:hidden;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  transform:translate(0, -200px);
+}
+header.fixed nav a, header.fixed .logo a{
+  color:#333;
+}
+header.in-view{
+  opacity:1;
+  visibility:visible;
+  transition: all 0.3s ease;
+  transform:translate(0, 0);
+}
+@media only screen and (max-width: 640px) {
+  header.fixed{
+    position:relative;
   }
-  .opaque-navbar {
-    background-color: black;
-    height: 60px;
-    transition: background-color .5s ease 0s;
+}
+.mainmenu-area {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 20px 140px 15px 0;
+  background: transparent;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
+.mainmenu-area.affix {
+  position: fixed;
+  top: 0;
 }
-
-
-
+.mainmenu-area:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(72, 44, 191);
+  background: -webkit-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+  background: -o-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+  background: linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}

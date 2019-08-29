@@ -62,3 +62,15 @@
       color: #FFFFFF;
       background-color:  #C2CFF9!important;
    }
+.wallpaper-takion{
+  position: absolute;
+  width: 1440px;
+  height: 844px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(90deg, #335EEA 0%, #A46CEC 100.9%);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+  background: radial-gradient(589.58px at 50% 50%, rgba(255, 254, 254, 0) 0%, rgba(0, 0, 0, 0.44) 100%);  
+}
+
+
