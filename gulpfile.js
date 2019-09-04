@@ -11,11 +11,10 @@ const del = require('del');
 const fileinclude = require('gulp-file-include');
 const gulp = require('gulp');
 const gulpif = require('gulp-if');
-const npmdist = require('gulp-npm-dist');
 const replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
-var rename = require("gulp-rename");
+const useref = require('gulp-useref');
 
 // Define paths
 const paths = {
@@ -184,11 +183,11 @@ gulp.task('html', function(callback) {
       basepath: '@file',
       indent: true
     }))
-    .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1..'))
-    .pipe(replace(/src="(.{0,10})assets/g, 'src="$1..'))
+    .pipe(replace(/src="([^"]*)"/g, 'src="$$href(\'$1\')"'))
+    .pipe(replace(/href="([^"]*)"/g, 'href="$$href(\'$1\')"'))
+
     .pipe(cached())
     
-
     .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', cleancss()))
     
