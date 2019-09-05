@@ -54,25 +54,33 @@
 
 
     input:not(:placeholder-shown) {
+      width: 249px;
+      height: 57px;
+      
       background-color:  rgb(255, 255, 255)!important;
+      border-radius: 10px;
+
    }
    
    
    input:placeholder-shown {
+      width: 249px;
+      height: 57px;
       color: #FFFFFF;
       background-color:  rgb(255, 255, 255)!important;
+      border-radius: 10px;
+
    }
 .wallpaper-takion{
-  position: absolute;
-  width: 1440px;
-  height: 844px;
-  left: 0px;
-  top: 0px;
+  
   background: linear-gradient(90deg, #335EEA 0%, #A46CEC 100.9%);
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
-  background: radial-gradient(589.58px at 50% 50%, rgba(255, 254, 254, 0) 0%, rgba(0, 0, 0, 0.44) 100%);  
 }
 
+.wallpaper-takion-overlay{
+
+  background: radial-gradient(589.58px at 50% 50%, rgba(255, 254, 254, 0) 0%, rgba(0, 0, 0, 0.44) 100%);
+}
 
 div.sticky-takion {
   position: -webkit-sticky;
@@ -80,6 +88,18 @@ div.sticky-takion {
   top: 0;
   padding: 5px;
  
+}
+
+.title-kronio {
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 109.37%;
+  /* or 55px */
+  
+  letter-spacing: 0.045em;
 }
 
 

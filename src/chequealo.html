@@ -4,12 +4,23 @@
     @@include("partials/head.html", {
       "pageTitle": ""
     })
+    <link rel="stylesheet"  href="../fonts/Poppins/poppins.css">
+    <link rel="stylesheet"  href="../css/takion.css">
+    <link rel="stylesheet"  href="../css/flexboxgrid.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/linearicons.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <!-- Main-Stylesheets -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/responsive.css">
   </head>
   <body class="bg-light">
 
     <!-- MODALS
     ================================================== -->
-    @@include("partials/modals.html")
+    @@include("partials/modals.html"
     
     <!-- NAVBAR
     ================================================== -->
@@ -20,8 +31,9 @@
 
     <!-- WELCOME
     ================================================== -->
-    <section data-jarallax data-speed=".8" class="pt-10 pb-11 py-md-14 overlay overlay-black overlay-60 jarallax" style="background-image: url(assets/svg/background.svg);"> 
     
+    <section class="wallpaper-takion pt-10 pb-11 py-md-1"> 
+    <div class="wallpaper-takion-overlay pt-10 pb-11 py-md-12">
       <div class="container " data-aos="fade-up">
         <div class="row align-items-center">
           <div class="col-6 col-md-5 col-lg-4 order-md-2">
@@ -30,13 +42,13 @@
           </div>
           <div class="col-12 col-md-7 col-lg-6 order-md-1">
             <!-- Heading -->
-            <h1 style="color:white;" class="display-6 text-center text-md-left">
+            <h1 style="color:white;" class="title-kronio display-6 text-center text-md-left">
               Mejora la nómina, <br>
               la rentabilidad y la <br>
               productividad
             </h1>
             <!-- Text -->
-            <p class="lead text-center text-md-left text-muted mb-6 mb-lg-8">
+            <p style="color:white;" class="lead text-center text-md-left mb-6 mb-lg-8">
               Con nuestro rastreador de hojas de tiempo que te pone en control.
             </p>
 
@@ -45,7 +57,7 @@
               <div class="btn-group input-group mb-3">
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 <div style=""class="input-group-prepend">
-                  <a href="#" button type="button" class="btn btn-takion-blue">Prueba Gratis TAKIÓN</a>
+                  <a href="#" button type="button" class="btn btn-info">Prueba Gratis TAKIÓN</a>
                 </div>
               </div>
             </form>
@@ -60,6 +72,7 @@
         </div> <!-- / .row -->
         <br>
       </div> <!-- / .container -->
+    </div>
     </section>
     
     <!-- SHAPE
@@ -83,7 +96,7 @@
             
             <!-- Heading -->
             <h2 class="font-weight-bold">
-              Takión el programa que necesitas
+              KRONIO el programa que necesitas
             </h2>
 
             <!-- Text -->
@@ -93,114 +106,7 @@
 
           </div>
         </div> <!-- / .row -->
-        <div class="row mb-7 mb-md-9">
-          <div class="col-12 col-md-4 text-center">
-            
-            <!-- Heading -->
-            <h6 class="text-uppercase text-gray-700 mb-1">
-              Message us
-            </h6>
-
-            <!-- Link -->
-            <div class="mb-5 mb-md-0">
-              <a href="#!" class="h4 text-primary">
-                Start a chat!
-              </a>
-            </div>
-
-          </div>
-          <div class="col-12 col-md-4 text-center border-left-md border-gray-300">
-            
-            <!-- Heading -->
-            <h6 class="text-uppercase text-gray-700 mb-1">
-              Call anytime
-            </h6>
-
-            <!-- Link -->
-            <div class="mb-5 mb-md-0">
-              <a href="#!" class="h4">
-                (555) 123-4567
-              </a>
-            </div>
-
-          </div>
-          <div class="col-12 col-md-4 text-center border-left-md border-gray-300">
-            
-            <!-- Heading -->
-            <h6 class="text-uppercase text-gray-700 mb-1">
-              Email us
-            </h6>
-
-            <!-- Link -->
-            <a href="#!" class="h4">
-              support@goodthemes.co
-            </a>
-
-          </div>
-        </div> <!-- / .row -->
-        <div class="row justify-content-center">
-          <div class="col-12">
-            
-            <!-- Form -->
-            <form>
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <div class="form-group mb-5">
-                    
-                    <!-- Label -->
-                    <label for="contactName">
-                      Full name
-                    </label>
-
-                    <!-- Input -->
-                    <input type="text" class="form-control" id="contactName" placeholder="Full name">
-
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="form-group mb-5">
-                    
-                    <!-- Label -->
-                    <label for="contactEmail">
-                      Email
-                    </label>
-
-                    <!-- Input -->
-                    <input type="email" class="form-control" id="contactEmail" placeholder="hello@domain.com">
-
-                  </div>
-                </div>
-              </div> <!-- / .row -->
-              <div class="row">
-                <div class="col-12">
-                  <div class="form-group mb-7 mb-md-9">
-                    
-                    <!-- Label -->
-                    <label for="contactMessage">
-                      What can we help you with?
-                    </label>
-
-                    <!-- Input -->
-                    <textarea class="form-control" id="contactMessage" rows="5" placeholder="Tell us what we can help you with!"></textarea>
-
-                  </div>
-                </div>
-              </div> <!-- / .row -->
-              <div class="row justify-content-center">
-                <div class="col-auto">
-                  
-                  <!-- Submit -->
-                  <button type="submit" class="btn btn-primary lift">
-                    Submit request
-                  </button>
-
-                </div>
-              </div> <!-- / .row -->
-            </form>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
+        
     </section>
 
     <!-- SHAPE
@@ -210,6 +116,30 @@
         @@include("assets/img/shapes/curves/curve-1.svg")
       </div>
     </div>
+
+    <!-- APPLICATIONS 
+    ================================================== -->
+    <section class="tabbed-features-container flex flex-column pb4 pb0-d bg-near-white">
+      <div class="tabbed-features-nav pt4 nevada slick-initialized slick-slider">
+        <button class="slick-prev slick-arrow slick-disabled" aria-label="Previous" type="button" aria-disabled="true" style="display: inline-block;">  >>
+          <div class="slick-list draggable">
+            <div class="slick-track" style="opacity: 1; width: 1440px; transform: translate3d(0px, 0px, 0px);">
+              <div data-id="0-1567720158.4037" id="feature_tab_0-1567720158.4037" class="feature-tab nowrap dib outline-0 pointer flex flex-column items-center justify-center mh3 mb0 tc slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 208px;" tabindex="0"> Mobile app 
+                <hr class="db w-60 mt3 h-0d375-rem bn br5 mb0 relative top-4-px"> 
+                  </div>
+              <div data-id="1-1567720158.4037" id="feature_tab_1-1567720158.4037" class="feature-tab nowrap dib outline-0 pointer flex flex-column items-center justify-center mh3 mb0 tc slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 208px;" tabindex="0"> GPS and geofencing 
+                <hr class="db w-60 mt3 h-0d375-rem bn br5 mb0 relative top-4-px"> </div><div data-id="2-1567720158.4037" id="feature_tab_2-1567720158.4037" class="feature-tab nowrap dib outline-0 pointer flex flex-column items-center justify-center mh3 mb0 tc slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 208px;" tabindex="0"> Scheduling <hr class="db w-60 mt3 h-0d375-rem bn br5 mb0 relative top-4-px"> </div><div data-id="3-1567720158.4037" id="feature_tab_3-1567720158.4037" class="feature-tab nowrap dib outline-0 pointer flex flex-column items-center justify-center mh3 mb0 tc slick-slide slick-active" data-slick-index="3" aria-hidden="false" style="width: 208px;" tabindex="0"> Time Clock Kiosk <hr class="db w-60 mt3 h-0d375-rem bn br5 mb0 relative top-4-px"> </div><div data-id="4-1567720158.4037" id="feature_tab_4-1567720158.4037" class="feature-tab nowrap dib outline-0 pointer flex flex-column items-center justify-center mh3 mb0 tc slick-slide" data-slick-index="4" aria-hidden="true" style="width: 208px;" tabindex="-1"> Alerts and approvals <hr class="db w-60 mt3 h-0d375-rem bn br5 mb0 relative top-4-px"> </div><div data-id="5-1567720158.4037" id="feature_tab_5-1567720158.4037" class="feature-tab nowrap dib outline-0 pointer flex flex-column items-center justify-center mh3 mb0 tc slick-slide" data-slick-index="5" aria-hidden="true" style="width: 208px;" tabindex="-1"> Smart reporting <hr class="db w-60 mt3 h-0d375-rem bn br5 mb0 relative top-4-px"> 
+            </div>
+          </div>
+        
+        </button>
+      </div>
+    </section>
+
+
+
+
+
 
     <!-- FOOTER
     ================================================== -->
