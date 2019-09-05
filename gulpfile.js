@@ -6,6 +6,8 @@
 const autoprefixer = require('gulp-autoprefixer');
 const browsersync = require('browser-sync').create();
 const cached = require('gulp-cached');
+const npmdist = require('gulp-npm-dist');
+
 const cleancss = require('gulp-clean-css');
 const del = require('del');
 const fileinclude = require('gulp-file-include');
@@ -14,7 +16,6 @@ const gulpif = require('gulp-if');
 const replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
-const useref = require('gulp-useref');
 
 // Define paths
 const paths = {
@@ -183,14 +184,10 @@ gulp.task('html', function(callback) {
       basepath: '@file',
       indent: true
     }))
-    .pipe(replace(/src="([^"]*)"/g, 'src="$$href(\'$1\')"'))
-    .pipe(replace(/href="([^"]*)"/g, 'href="$$href(\'$1\')"'))
-
     .pipe(cached())
-    
+    .pipe(replace(/assets(.{3})/g, '$1'))
     .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', cleancss()))
-    
     .pipe(gulp.dest(paths.dist.base.dir));
 });
 
