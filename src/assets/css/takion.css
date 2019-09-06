@@ -1,76 +1,71 @@
-.btn-takion-purple {
-    color: #FFFFFF;
-    background-color: #C2CFF9;
-    border-color: rgb(255, 255, 255);
-    -webkit-box-shadow: rgb(255, 255, 255);
-            box-shadow: rgb(255, 255, 255); }
-    .btn-takion-purple:hover {
-      color: #FFFFFF;
-      background-color: #C2CFF9;
-      border-color: rgb(255, 255, 255); }
-    .btn-takion-purple:focus, .btn-takion-purple.focus {
-      -webkit-box-shadow: none, 0 0 0 0 #C2CFF9;
-              box-shadow: none, 0 0 0 0 #C2CFF9; }
-    .btn-takion-purple.disabled, .btn-takion-purple:disabled {
-      color: #FFFFFF;
-      background-color: #C2CFF9;
-      border-color: rgb(255, 255, 255); }
-    .btn-takion-purple:not(:disabled):not(.disabled):active, .btn-takion-purple:not(:disabled):not(.disabled).active,
-    .show > .btn-takion-purple.dropdown-toggle {
-      color: #FFFFFF;
-      background-color: rgba(194, 207, 249, 0.699);
-      border-color: rgba(194, 207, 249, 0.699); }
-      .btn-takion-purple:not(:disabled):not(.disabled):active:focus, .btn-takion-purple:not(:disabled):not(.disabled).active:focus,
-      .show > .btn-takion-purple.dropdown-toggle:focus {
-        -webkit-box-shadow: 0 0 0 0 #C2CFF9;
-                box-shadow: 0 0 0 0 #C2CFF9; }
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=devanagari,latin-ext');
 
-.btn-takion-blue {
-    color: #FFFFFF;
-    background-color: #335EEA;
-    border-color: #335EEA;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-    .btn-takion-blue:hover {
-    color: #FFFFFF;
-    background-color: #335EEA;
-    border-color: rgb(162, 174, 214); }
-    .btn-takion-blue:focus, .btn-takion-blue.focus {
-    -webkit-box-shadow: none, 0 0 0 0 #335EEA;
-    box-shadow: none, 0 0 0 0 #335EEA }
-    .btn-takion-blue.disabled, .btn-takion-blue:disabled {
-    color: #FFFFFF;
-    background-color: #335EEA;
-    border-color: #335EEA; }
-    .btn-takion-blue:not(:disabled):not(.disabled):active, .btn-takion-blue:not(:disabled):not(.disabled).active,
-    .show > .btn-takion-blue.dropdown-toggle {
-    color: #FFFFFF;
-    background-color: #335EEA;
-    border-color: #335EEA; }
-    .btn-takion-blue:not(:disabled):not(.disabled):active:focus, .btn-takion-blue:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-takion-blue.dropdown-toggle:focus {
-    -webkit-box-shadow: 0 0 0 0 #335EEA;
-    box-shadow: 0 0 0 0 #335EEA; }
+.btn-blue-kronio {
+	-webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 
+  cursor: pointer;
+  border: none;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font: normal 16px/normal Poppins;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-transform: uppercase;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #335EEA;
+  -webkit-transition: background 0.2s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -moz-transition: background 0.2s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -o-transition: background 0.2s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: background 0.2s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+.btn-blue-kronio:hover {
+  color: rgba(255,255,255,1);
+  background: rgba(51,94,234,0.9);
+  
 
-    input:not(:placeholder-shown) {
-      width: 249px;
-      height: 57px;
-      
-      background-color:  rgb(255, 255, 255)!important;
-      border-radius: 10px;
+}
 
-   }
-   
-   
-   input:placeholder-shown {
-      width: 249px;
-      height: 57px;
-      color: #FFFFFF;
-      background-color:  rgb(255, 255, 255)!important;
-      border-radius: 10px;
+.input-kronio
+{
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  float: none;
+  z-index: auto;
+  width: auto;
+  height: auto;
+  position: static;
+  cursor: default;
+  opacity: 1;
+  margin: 0;
+  padding: 10px 20px;
+  overflow: visible;
+  border: 1px solid #335EEA;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font: normal 16px/normal "Poppins";
+  color: #335EEA;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(255,255,255,0.8);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transform: none;
+  transform: none;
+  -webkit-transform-origin: 50% 50% 0;
+  transform-origin: 50% 50% 0;
 
-   }
+}
+
 .wallpaper-takion{
   
   background: linear-gradient(90deg, #335EEA 0%, #A46CEC 100.9%);
@@ -91,15 +86,50 @@ div.sticky-takion {
 }
 
 .title-kronio {
-
+  
+  
   font-family: Poppins;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 116.87%;
+  /* or 37px */
+
+  letter-spacing: 0.125em;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.title-black-kronio {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
   font-size: 50px;
   line-height: 109.37%;
   /* or 55px */
   
-  letter-spacing: 0.045em;
+  letter-spacing: 0.055em;
+  
+  color: rgba(0, 0, 0, 0.9);
+  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 
+.text-kronio{
+  width: 506px;
+  height: 397px;
+  left: 836px;
+  top: 2426px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 128%;
+  /* or 23px */
+
+  letter-spacing: 0.045em;
+  color: #869AB8;
+
+  
+}
