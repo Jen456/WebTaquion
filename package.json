@@ -73,6 +73,7 @@
     "npm": "^6.11.3",
     "popper.js": "^1.14.7",
     "rfs": "^9.0.0",
+    "slick-carousel": "^1.8.1",
     "smooth-scroll": "16.0.3",
     "typed.js": "2.0.10",
     "util.js": "0.0.0",

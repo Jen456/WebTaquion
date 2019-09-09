@@ -4,36 +4,29 @@
     @@include("partials/head.html", {
       "pageTitle": ""
     })
-    <link rel="stylesheet"  href="../fonts/Poppins/poppins.css">
-    <link rel="stylesheet"  href="../css/takion.css">
-    <link rel="stylesheet"  href="../css/flexboxgrid.css">
+    <link rel="stylesheet"  href="../css/kronio.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/linearicons.css">
-    <link rel="stylesheet" href="../css/magnific-popup.css">
     <link rel="stylesheet" href="../css/animate.css">
     <!-- Main-Stylesheets -->
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/responsive.css">
   </head>
   <body class="bg-light">
 
     <!-- MODALS
     ================================================== -->
-    @@include("partials/modals.html"
+    @@include("partials/modals.html")
     
     <!-- NAVBAR
     ================================================== -->
     @@include("partials/navbar.html", {
-      "classList": "navbar-light bg-white",
-      "type": "boxed"
+      "classList": "fixed-top bg-transparent ",
+      "type": "fluid"
     })
 
     <!-- WELCOME
     ================================================== -->
     
-    <section class="wallpaper-takion pt-10 pb-11 py-md-1"> 
-    <div class="wallpaper-takion-overlay pt-10 pb-11 py-md-12">
+    <section class="wallpaper-kronio col-18 .col-md-8 "> 
+    <div class="wallpaper-kronio-overlay pt-12 pb-11 py-md-12">
       <div class="container " data-aos="fade-up">
         <div class="row align-items-center">
           <div class="col-6 col-md-5 col-lg-4 order-md-2">
@@ -42,26 +35,28 @@
           </div>
           <div class="col-12 col-md-7 col-lg-6 order-md-1">
             <!-- Heading -->
-            <h1 style="color:white;" class="title-kronio display-6 text-center text-md-left">
+            <h1 style="color:white;" class="title-kronio display-4 text-md-left">
               Mejora la nómina, <br>
               la rentabilidad y la <br>
               productividad
             </h1>
             <!-- Text -->
-            <p style="color:white;" class="lead text-center text-md-left mb-6 mb-lg-8">
-              Con nuestro rastreador de hojas de tiempo que te pone en control.
+            <p style="color:white;" class="lead text-center text-md-left mb-4 mb-lg-10">
+              <br>Con nuestro rastreador de hojas de tiempo que te pone en control.
             </p>
 
             <!-- FORM -->
             <form>
-              <div class="btn-group input-group mb-3">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <div class="col-16 col-xs-12 btn-group input-group mb-2">
+                <input type="email" class="input-kronio form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 <div style=""class="input-group-prepend">
-                  <a href="#" button type="button" class="btn btn-info">Prueba Gratis TAKIÓN</a>
+                  <a href="#" button type="button" class="btn btn-lightblue-kronio">Prueba Gratis KRONIO</a>
                 </div>
+                
               </div>
+              
             </form>
-            <div class="font-size-sm text-muted mb-5">No se requiere tarjeta de crédito</div>
+            <div class="font-size-sm text-muted mb-4">No se requiere tarjeta de crédito</div>
 
             <!-- Buttons -->
             <div class="text-center text-md-left pt-8 py-4">

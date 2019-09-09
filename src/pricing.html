@@ -1,423 +1,39 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<!-- Libs CSS -->
-<link rel="stylesheet" href="../assets/fonts/Feather/feather.css">
-<link rel="stylesheet" href="../node_modules/flickity/dist/flickity.min.css">
-<link rel="stylesheet" href="../node_modules/flickity-fade/flickity-fade.css">
-<link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
-<link rel="stylesheet" href="../node_modules/jarallax/dist/jarallax.css">
-<link rel="stylesheet" href="../node_modules/highlightjs/styles/vs2015.css">
-<link rel="stylesheet" href="../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
-
-<!-- Map -->
-<link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
-
-<!-- Theme CSS -->
-<!-- build:css ../assets/css/theme.min.css -->
-<link rel="stylesheet" href="../assets/css/theme.css">
-<!-- endbuild -->
-
-<title>Landkit</title>
+    @@include("partials/head.html", {
+      "pageTitle": ""
+    })
+    <link rel="stylesheet"  href="../fonts/Poppins/poppins.css">
+    <link rel="stylesheet"  href="../css/kronio.css">
+    <link rel="stylesheet"  href="../css/flexboxgrid.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/linearicons.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <!-- Main-Stylesheets -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/responsive.css">
   </head>
+  <body class="bg-light">
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+    
+    <!-- NAVBAR
+    ================================================== -->
+    @@include("partials/navbar.html", {
+      "classList": "navbar-light bg-white",
+      "type": "boxed"
+    })
+
   <body class="pt-10 bg-light">
 
     <!-- MODALS
     ================================================== -->
-    <!-- Example -->
-<div class="modal fade" id="modalExample" tabindex="-1" role="dialog" aria-labelledby="modalExampleTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-
-        <!-- Close -->
-        
-
-        <!-- Image -->
-        <div class="text-center">
-          <img src="../assets/img/illustrations/illustration-1.png" alt="..." class="img-fluid mb-3" style="width: 200px;">
-        </div>
-
-        <!-- Heading -->
-        <h2 class="font-weight-bold text-center mb-1" id="modalExampleTitle">
-          Schedule a demo with us
-        </h2>
-
-        <!-- Text -->
-        <p class="font-size-lg text-center text-muted mb-6 mb-md-8">
-          We can help you solve company communication.
-        </p>
-
-        <!-- Form -->
-        <form>
-          <div class="row">
-            <div class="col-12 col-md-6">
-
-              <!-- First name -->
-              <div class="form-label-group">
-                <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First name">
-                <label for="registrationFirstNameModal">First name</label>
-              </div>
-
-            </div>
-            <div class="col-12 col-md-6">
-
-              <!-- Last name -->
-              <div class="form-label-group">
-                <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last name">
-                <label for="registrationLastNameModal">Last name</label>
-              </div>
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-6">
-
-              <!-- Email -->
-              <div class="form-label-group">
-                <input type="email" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email">
-                <label for="registrationEmailModal">Email</label>
-              </div>
-
-            </div>
-            <div class="col-12 col-md-6">
-
-              <!-- Password -->
-              <div class="form-label-group">
-                <input type="password" class="form-control form-control-flush" id="registrationPasswordModal" placeholder="Password">
-                <label for="registrationPasswordModal">Password</label>
-              </div>
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-
-              <!-- Submit -->
-              <button class="btn btn-block btn-primary mt-3 lift">
-                Request a demo
-              </button>
-
-            </div>
-          </div>
-        </form>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Signup: Horizontal  -->
-<div class="modal fade" id="modalSignupHorizontal" tabindex="-1" role="dialog" aria-labelledby="modalSignupHorizontalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="card card-row">
-        <div class="row no-gutters">
-          <div class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url(../assets/img/photos/photo-8.jpg);">
-
-            <!-- Image (placeholder) -->
-            <img src="../assets/img/photos/photo-8.jpg" alt="..." class="img-fluid d-md-none invisible">
-
-            <!-- Shape -->
-            <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
-              <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M116 0H51V172C76 384 0 517 0 517V690H116V0Z" fill="currentColor"/>
-              </svg>
-            </div>
-
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="card-body">
-
-              <!-- Close -->
-              <button type="button" class="modal-close close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
-
-              <!-- Heading -->
-              <h2 class="mb-0 font-weight-bold text-center" id="modalSignupHorizontalTitle">
-                Sign Up
-              </h2>
-
-              <!-- Text -->
-              <p class="mb-6 text-center text-muted">
-                Simplify your workflow in minutes.
-              </p>
-
-              <!-- Form -->
-              <form class="mb-6">
-
-                <!-- Email -->
-                <div class="form-group">
-                  <label class="sr-only" for="modalSignupHorizontalEmail">
-                    Your email
-                  </label>
-                  <input type="email" class="form-control" id="modalSignupHorizontalEmail" placeholder="Your email">
-                </div>
-
-                <!-- Password -->
-                <div class="form-group mb-5">
-                  <label class="sr-only" for="modalSignupHorizontalPassword">
-                    Create a password
-                  </label>
-                  <input type="password" class="form-control" id="modalSignupHorizontalPassword" placeholder="Create a password">
-                </div>
-
-                <!-- Submit -->
-                <button class="btn btn-block btn-primary" type="submit">
-                  Sign up
-                </button>
-
-              </form>
-
-              <!-- Text -->
-              <p class="mb-0 font-size-sm text-center text-muted">
-                Already have an account? <a href="../signin-illustration.html">Log in</a>.
-              </p>
-
-            </div>
-          </div>
-
-        </div> <!-- / .row -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Signup: Vertical  -->
-<div class="modal fade" id="modalSignupVertical" tabindex="-1" role="dialog" aria-labelledby="modalSignupVerticalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="card">
-
-        <!-- Close -->
-        <button type="button" class="modal-close close text-white" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-
-        <!-- Image -->
-        <img src="../assets/img/photos/photo-7.jpg" alt="..." class="card-img-top">
-
-        <!-- Shape -->
-        <div class="position-relative">
-          <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-            <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0V480H2880V0H2160Z" fill="currentColor"/>
-            </svg>
-          </div>
-        </div>
-
-        <!-- Body -->
-        <div class="card-body">
-
-          <!-- Heading -->
-          <h2 class="mb-0 font-weight-bold text-center" id="modalSignupVerticalTitle">
-            Sign Up
-          </h2>
-
-          <!-- Text -->
-          <p class="mb-6 text-center text-muted">
-            Simplify your workflow in minutes.
-          </p>
-
-          <!-- Form -->
-          <form class="mb-6">
-
-            <!-- Email -->
-            <div class="form-group">
-              <label class="sr-only" for="modalSignupVerticalEmail">
-                Your email
-              </label>
-              <input type="email" class="form-control" id="modalSignupVerticalEmail" placeholder="Your email">
-            </div>
-
-            <!-- Password -->
-            <div class="form-group mb-5">
-              <label class="sr-only" for="modalSignupVerticalPassword">
-                Create a password
-              </label>
-              <input type="password" class="form-control" id="modalSignupVerticalPassword" placeholder="Create a password">
-            </div>
-
-            <!-- Submit -->
-            <button class="btn btn-block btn-primary" type="submit">
-              Sign up
-            </button>
-
-          </form>
-
-          <!-- Text -->
-          <p class="mb-0 font-size-sm text-center text-muted">
-            Already have an account? <a href="../signin-illustration.html">Log in</a>.
-          </p>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Signin: Horizontal  -->
-<div class="modal fade" id="modalSigninHorizontal" tabindex="-1" role="dialog" aria-labelledby="modalSigninHorizontalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="card card-row">
-        <div class="row no-gutters">
-          <div class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url(../assets/img/photos/photo-1.jpg);">
-
-            <!-- Image (placeholder) -->
-            <img src="../assets/img/photos/photo-1.jpg" alt="..." class="img-fluid d-md-none invisible">
-
-            <!-- Shape -->
-            <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
-              <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M116 0H51V172C76 384 0 517 0 517V690H116V0Z" fill="currentColor"/>
-              </svg>
-            </div>
-
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="card-body">
-
-              <!-- Close -->
-              <button type="button" class="modal-close close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
-
-              <!-- Heading -->
-              <h2 class="mb-0 font-weight-bold text-center" id="modalSigninHorizontalTitle">
-                Sign In
-              </h2>
-
-              <!-- Text -->
-              <p class="mb-6 text-center text-muted">
-                Simplify your workflow in minutes.
-              </p>
-
-              <!-- Form -->
-              <form class="mb-6">
-
-                <!-- Email -->
-                <div class="form-group">
-                  <label class="sr-only" for="modalSigninHorizontalEmail">
-                    Your email
-                  </label>
-                  <input type="email" class="form-control" id="modalSigninHorizontalEmail" placeholder="Your email">
-                </div>
-
-                <!-- Password -->
-                <div class="form-group mb-5">
-                  <label class="sr-only" for="modalSigninHorizontalPassword">
-                    Create a password
-                  </label>
-                  <input type="password" class="form-control" id="modalSigninHorizontalPassword" placeholder="Create a password">
-                </div>
-
-                <!-- Submit -->
-                <button class="btn btn-block btn-primary" type="submit">
-                  Sign in
-                </button>
-
-              </form>
-
-              <!-- Text -->
-              <p class="mb-0 font-size-sm text-center text-muted">
-                Don't have an account yet? <a href="../signin-illustration.html">Sign up</a>.
-              </p>
-
-            </div>
-          </div>
-
-        </div> <!-- / .row -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Signup: Vertical  -->
-<div class="modal fade" id="modalSigninVertical" tabindex="-1" role="dialog" aria-labelledby="modalSigninVerticalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="card">
-
-        <!-- Close -->
-        <button type="button" class="modal-close close text-white" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-
-        <!-- Image -->
-        <img src="../assets/img/photos/photo-21.jpg" alt="..." class="card-img-top">
-
-        <!-- Shape -->
-        <div class="position-relative">
-          <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-            <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0V480H2880V0H2160Z" fill="currentColor"/>
-            </svg>
-          </div>
-        </div>
-
-        <!-- Body -->
-        <div class="card-body">
-
-          <!-- Heading -->
-          <h2 class="mb-0 font-weight-bold text-center" id="modalSigninVerticalTitle">
-            Sign In
-          </h2>
-
-          <!-- Text -->
-          <p class="mb-6 text-center text-muted">
-            Simplify your workflow in minutes.
-          </p>
-
-          <!-- Form -->
-          <form class="mb-6">
-
-            <!-- Email -->
-            <div class="form-group">
-              <label class="sr-only" for="modalSigninVerticalEmail">
-                Your email
-              </label>
-              <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Your email">
-            </div>
-
-            <!-- Password -->
-            <div class="form-group mb-5">
-              <label class="sr-only" for="modalSigninVerticalPassword">
-                Create a password
-              </label>
-              <input type="password" class="form-control" id="modalSigninVerticalPassword" placeholder="Create a password">
-            </div>
-
-            <!-- Submit -->
-            <button class="btn btn-block btn-primary" type="submit">
-              Sign in
-            </button>
-
-          </form>
-
-          <!-- Text -->
-          <p class="mb-0 font-size-sm text-center text-muted">
-            Don't have an account yet? <a href="../signin-illustration.html">Sign up</a>.
-          </p>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!-- NAVBAR
-    ================================================== -->
-    @@include("partials/navbar.html", {
-      "classList": "bg-dark"
-    })
+  
 
     <!-- WELCOME
     ================================================== -->
@@ -426,14 +42,14 @@
       <!-- Shape -->
       <div class="shape shape-blur-3 svg-shim text-white">
         <svg viewBox="0 0 1738 487" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 0H1420.92C1420.92 0 2134.35 457.505 1420.92 485.868C707.502 514.231 0 0 0 0Z" fill="url(#paint0_linear)"/>
-  <defs>
-    <linearGradient id="paint0_linear" x1="0" y1="0" x2="1049.98" y2="912.68" gradientUnits="userSpaceOnUse">
-    <stop stop-color="currentColor" stop-opacity="0.075"/>
-    <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
-  </linearGradient>
-  </defs>
-</svg>
+        <path d="M0 0H1420.92C1420.92 0 2134.35 457.505 1420.92 485.868C707.502 514.231 0 0 0 0Z" fill="url(#paint0_linear)"/>
+        <defs>
+          <linearGradient id="paint0_linear" x1="0" y1="0" x2="1049.98" y2="912.68" gradientUnits="userSpaceOnUse">
+          <stop stop-color="currentColor" stop-opacity="0.075"/>
+          <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+        </linearGradient>
+        </defs>
+      </svg>
       </div>
 
       <!-- Content -->

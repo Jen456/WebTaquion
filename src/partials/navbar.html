@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
+  
+
    @@include("modals.html", {
-      "pageTitle": "Taquion"
+      "pageTitle": "KRONIO"
     })
     <link rel="stylesheet" href="../assets/css/takion.css">
     <link rel="stylesheet" href="../assets/css/flexboxgrid.css">
@@ -10,10 +12,14 @@
     <!-- Main-Stylesheets -->
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
   </head>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light toggleNavbar fixed-top bg-white " data-spy="scroll">
+    <nav class="navbar nav-kronio navbar-fixed-top navbar-expand-lg @@classList">
+      @@if(type=="boxed"){<div class="container">}
       
         <!-- Brand -->
         <a class="navbar-brand" href="../index.html">
@@ -26,15 +32,15 @@
         </button>
 
         <!-- Collapse -->
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class=" collapse navbar-collapse " id="navbarNav">
 
           <!-- Toggler -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fe fe-x"></i>
           </button>
 
           <!-- Navigation -->
-          <ul class="navbar-nav ml-auto">
+          <ul class="ml-auto navbar-nav">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="../pricing.html">
               Precios
@@ -73,5 +79,12 @@
 
 
         </div>
+      @@if(type=="boxed"){</div>}
     </nav>
  
+ <body>
+<!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+      
+ </body>

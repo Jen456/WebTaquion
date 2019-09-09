@@ -13,10 +13,9 @@
     })
     <link rel="stylesheet"  href="../fonts/Poppins/poppins.css">
     <link rel="stylesheet"  href="../css/takion.css">
-    
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    
+    <link rel="stylesheet" href="../assets/css/iconos.css">
     <link rel="stylesheet" href="../css/animate.css">
     <!-- Main-Stylesheets -->
     
@@ -30,13 +29,13 @@
   <!-- NAVBAR
   ================================================== -->
   @@include("partials/navbar.html", {
-    "classList": "navbar-light",
-    "type": "boxed"
-  })
+      "classList": "navbar-light fixed-top bg-white border-bottom",
+      "type": "fluid"
+    })
     <!-- WELCOME
     ================================================== -->
   <header class="home-area overlay angle" id="home_page">
-    <section class="section-padding col-12 pt-md-14 ">
+    <section class="section-padding col-12 pt-md-10 ">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-4 col-lg-6 order-md-1">
@@ -77,7 +76,7 @@
   </header>
     <!-- FEATURES
     ================================================== -->
-    <section class="col-12 py-md-8 border-bottom" >
+    <section class="col-12 py-md-10 border-bottom" >
       <div class="container" >
         <div class="row ">
           <div class="lift col-12 col-md-4 text-center">
@@ -144,7 +143,7 @@
                 Personalice la configuración de la empresa y administre las hojas de tiempo de sus empleados.
                 Función disponible sin costos adicionales.</p>
                 <div class="pt-12 py-lg-8">  <!-- alineo hacia abajo -->
-                <a class="col px-md-2 btn btn-takion-purple" href="@@webRoot/chequealo.html" role="button">Chequealo</a>
+                <a class="col px-md-2 btn btn-purple-kronio" href="@@webRoot/chequealo.html" role="button">Chequealo</a>
                 </div>
               </div>
             </div>
@@ -154,7 +153,7 @@
                 <h5 class="py-4" style="text-align: center;"><strong>Aplicación Móvil</strong><span style="color: #3366ff;">     </span></h5>
                 <p class="card-text pt-12 py-md-8" style="text-align: center; color:#869AB8">  Utilizamos tecnología de geolocalización empleados y administradores capturan, envían y aprueba el tiempo desde sus celulares, perfecta para personal que desenpeña sus tareas fuera. Además de contar con notificaciones automáticas que les recuerda a los empleados marcar, facilitando el intercambio de horarios. </p>
                 <div class="pt-12 py-lg-4">  <!-- alineo hacia abajo -->
-                <button type="button" class="col px-md-5 btn btn-takion-purple">Recorrido</button>
+                <button type="button" class="col px-md-5 btn btn-purple-kronio">Recorrido</button>
                 </div>
               </div>
             </div>
@@ -164,7 +163,7 @@
                 <h5 class="py-8" style="text-align: center;"><strong>Tablet</strong><span style="color: #3366ff;">  </span></h5>
                 <p class="card-text pt-12 py-md-8 " style="text-align: center; color:#869AB8">  Nosostros les proporcionamos una tablet para que los empleados marquen desde un lugar fijo. Sustituyendo a los tradicionales tarjeteros, evitando las demoras o lecturas fallidas, funciona en cualquier computadora o tableta conectada a internet o LTE para lugares sin acceso a internet.  </p>
                 <div class="pt-12 py-lg-8">  <!-- alineo hacia abajo -->
-              <button type="button" class="col px-md-5 btn btn-takion-purple">Cómo funciona</button>
+              <button type="button" class="col px-md-5 btn btn-purple-kronio">Cómo funciona</button>
               </div>
               </div>
               </div>
@@ -224,30 +223,30 @@
     <section class="pt-12 py-md-10 bg-light">
       <div class="container " data-aos="fade-up">
       <div class="text-center">
-        <h1 class="py-md-10 font-weight-bold"> Agiliza, simplifica y ahorra dinero </h1>
+        <h1 class="py-md-10 title-2-kronio"> Agiliza, simplifica y ahorra dinero </h1>
       </div>
       <!-- Primer bloque de cards -->
       
          <div class="card-group">
             <div class="card bg-light " >
-              <span aria-hidden="true" data-icon="&#x25a8;"></span>
+              <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/calendariocaracteris.svg" width="172" height="72" alt="Card image cap">
               <div class="card-body text-center">
-                <h5 class="card-title font-weight-bold">Programación</h5>
-                <p class="card-text">Automatice reglas de horas extra, personalice las tasas de pago y programe cálculos complejos de horas extras según sus necesidades. Edite, publique y comparta de forma rápida y sencilla el programa con su equipo.</p>
+                <h5 class="card-title title-3-kronio">Programación</h5>
+                <p class="card-text text-2-kronio"><br>Automatice reglas de horas extra, personalice las tasas de pago y programe cálculos complejos de horas extras según sus necesidades. Edite, publique y comparta de forma rápida y sencilla el programa con su equipo.</p>
             </div>
           </div>
           <div class="card bg-light ">
-            <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/informescaracteris.svg" width="200" height="100" alt="Card image cap">
+            <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/informescaracteris.svg" width="172" height="72" alt="Card image cap">
             <div class="card-body text-center">
-              <h5 class="card-title font-weight-bold">Informes</h5>
-              <p class="card-text">Obtenga información empresarial valiosa con informes interactivos en tiempo real, obtenga reportes y estadísticas por sucursal, por empleado, o de toda la organización dándole la información necesaria para que mejore la productividad.</p>
+              <h5 class="card-title title-3-kronio">Informes</h5>
+              <p class="card-text text-2-kronio"><br>Obtenga información empresarial valiosa con informes interactivos en tiempo real, obtenga reportes y estadísticas por sucursal, por empleado, o de toda la organización dándole la información necesaria para que mejore la productividad.</p>
             </div>
           </div>
           <div class="card bg-light ">
-            <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/mapagps.svg" width="200" height="100" alt="Card image cap">
+            <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/mapagps.svg" width="172" height="72" alt="Card image cap">
             <div class="card-body text-center">
-              <h5 class="card-title font-weight-bold ">GPS</h5>
-              <p class="card-text">Descargue la aplicación Android o iOS para rastrear, enviar y aprobar el tiempo de los empleados desde prácticamente cualquier lugar.
+              <h5 class="card-title title-3-kronio">GPS</h5>
+              <p class="card-text text-2-kronio"><br>Descargue la aplicación Android o iOS para rastrear, enviar y aprobar el tiempo de los empleados desde prácticamente cualquier lugar.
               La entrada de tiempo del empleado es segura y detallada con reconocimiento facial instantáneo,huella digital o código Qr.</p>
             </div>
        </div>
@@ -255,24 +254,24 @@
          <!-- Segundo bloque de cards -->
          <div class="card-group">
           <div class="card bg-light ">
-            <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/nubecaracteris.svg" width="200" height="100" alt="Card image cap">
+            <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/nubecaracteris.svg" width="172" height="72" alt="Card image cap">
             <div class="card-body text-center">
-              <h5 class="card-title font-weight-bold">Almacenamiento en la nube</h5>
-              <p class="card-text"> Con los informes basados ​​en la nube, puede revisar el tiempo de los empleados y procesar la nómina desde cualquier dispositivo del mundo.</p>
+              <h5 class="card-title title-3-kronio">Almacenamiento en la nube</h5>
+              <p class="card-text text-2-kronio"><br> Con los informes basados ​​en la nube, puede revisar el tiempo de los empleados y procesar la nómina desde cualquier dispositivo del mundo.</p>
             </div>
           </div>
           <div class="card  bg-light ">
-            <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/relojcaracteris.svg" width="200" height="100" alt="Card image cap">
+            <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/relojcaracteris.svg" width="172" height="72" alt="Card image cap">
             <div class="card-body text-center">
-              <h5 class="card-title font-weight-bold">Cumplimiento laboral</h5>
-              <p class="card-text">Los empleados pueden registrar su entrada o salida con un solo clic. Tómese un descanso, cambie los códigos de trabajo o agregue detalles de la hoja de tiempo al instante.</p>
+              <h5 class="card-title title-3-kronio">Cumplimiento laboral</h5>
+              <p class="card-text text-2-kronio"><br>Los empleados pueden registrar su entrada o salida con un solo clic. Tómese un descanso, cambie los códigos de trabajo o agregue detalles de la hoja de tiempo al instante.</p>
             </div>
           </div>
           <div class="card bg-light ">
-            <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/costoflexible.svg" width="200" height="100" alt="Card image cap">
+            <img class="card-img-top" data-aos="zoom-out-down" src="assets/svg/costoflexible.svg" width="172" height="72" alt="Card image cap">
             <div class="card-body text-center">
-              <h5 class="card-title font-weight-bold">Costo flexible</h5>
-              <p class="card-text">El costo del servicio es variable según la cantidad de personal que la empresa tenga. Esto lo hace accesible para los pequeños negocios, hasta las grandes compañías.</p>
+              <h5 class="card-title title-3-kronio">Costo flexible</h5>
+              <p class="card-text text-2-kronio"><br>El costo del servicio es variable según la cantidad de personal que la empresa tenga. Esto lo hace accesible para los pequeños negocios, hasta las grandes compañías.</p>
             </div>
           </div>
         </div>

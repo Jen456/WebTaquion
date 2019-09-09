@@ -25,6 +25,53 @@
 
 }
 
+.btn-purple-kronio {
+	background-color:#c2cff9;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #c2cff9;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+}
+.btn-purple-kronio:hover {
+	background-color:#c2cff9;
+}
+.btn-purple-kronio:active {
+	position:relative;
+	top:1px;
+}
+
+
+.btn-lightblue-kronio {
+	background-color:#1098e7;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #1098e7;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+}
+.btn-lightblue-kronio:hover {
+	background-color:#1098e7;
+}
+.btn-lightblue-kronio:active {
+	position:relative;
+	top:1px;
+}
+
+        
+
 .input-kronio
 {
   display: inline-block;
@@ -63,18 +110,18 @@
 
 }
 
-.wallpaper-takion{
+.wallpaper-kronio{
   
   background: linear-gradient(90deg, #335EEA 0%, #A46CEC 100.9%);
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
 }
 
-.wallpaper-takion-overlay{
+.wallpaper-kronio-overlay{
 
   background: radial-gradient(589.58px at 50% 50%, rgba(255, 254, 254, 0) 0%, rgba(0, 0, 0, 0.44) 100%);
 }
 
-div.sticky-takion {
+div.sticky-kronio {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -87,7 +134,7 @@ div.sticky-takion {
   
   font-family: Poppins;
   font-style: normal;
-  font-weight: 300;
+  font-weight: bold;
   font-size: 32px;
   line-height: 116.87%;
   /* or 37px */
@@ -112,6 +159,35 @@ div.sticky-takion {
 
 }
 
+.title-2-kronio {
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 109.37%;
+  /* or 39px */
+
+  text-align: center;
+  letter-spacing: 0.125em;
+
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.title-3-kronio{
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 109.37%;
+  /* identical to box height, or 22px */
+
+  text-align: center;
+  letter-spacing: 0.125em;
+
+  color: rgba(0, 0, 0, 0.9);
+}
 
 .text-kronio{
   width: 506px;
@@ -127,6 +203,31 @@ div.sticky-takion {
 
   letter-spacing: 0.045em;
   color: #869AB8;
+}
 
-  
+.text-2-kronio{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 128%;
+  /* or 20px */
+
+  text-align: center;
+  letter-spacing: 0.045em;
+
+  color: #637691;
+}
+
+.pagination kronio {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination kronio.active {
+  background-color: dodgerblue;
+  color: white;
 }
