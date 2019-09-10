@@ -40,7 +40,7 @@ const paths = {
   },
   src:    {
     base:   {
-      dir:    './src',
+      dir:    './src/',
       files:  './src/**/*'
     },
     css:    {
