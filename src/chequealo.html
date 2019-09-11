@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+
     @@include("partials/head.html", {
-      "pageTitle": ""
+      "pageTitle": "KRONIO"
     })
     <link rel="stylesheet"  href="../css/kronio.css">
+    <link rel="stylesheet"  href="../css/scss/navbar.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet"  href="./assets/css/slick.css">
@@ -12,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
     
+
 
     <!-- Main-Stylesheets -->
   </head>
@@ -23,9 +26,9 @@
     
     <!-- NAVBAR
     ================================================== -->
-    @@include("partials/navbar.html", {
-      "classList": "fixed-top bg-transparent ",
-      "type": "fluid"
+   @@include("partials/navbar.html", {
+      "classList": "navbar-light bg-white border-bottom",
+      "type": "boxed"
     })
 
     <!-- WELCOME
@@ -62,7 +65,7 @@
               </div>
               
             </form>
-            <div class="font-size-sm text-muted mb-4">No se requiere tarjeta de crédito</div>
+            <div class="text-3-kronio text-white">No se requiere tarjeta de crédito</div>
 
             <!-- Buttons -->
             <div class="text-center text-md-left pt-8 py-4">
@@ -106,8 +109,7 @@
     <!-- APPLICATIONS 
     ================================================== -->
     
-
-
+    
 
 
     <!-- FOOTER
@@ -119,66 +121,15 @@
     <!-- JAVASCRIPT
     ================================================== -->
     @@include("partials/scripts.html")
-     
-    <script type="text/javascript">
-      $(document).on('ready', function() {
-        $(".vertical-center-4").slick({
-          dots: true,
-          vertical: true,
-          centerMode: true,
-          slidesToShow: 4,
-          slidesToScroll: 2
-        });
-        $(".vertical-center-3").slick({
-          dots: true,
-          vertical: true,
-          centerMode: true,
-          slidesToShow: 3,
-          slidesToScroll: 3
-        });
-        $(".vertical-center-2").slick({
-          dots: true,
-          vertical: true,
-          centerMode: true,
-          slidesToShow: 2,
-          slidesToScroll: 2
-        });
-        $(".vertical-center").slick({
-          dots: true,
-          vertical: true,
-          centerMode: true,
-        });
-        $(".vertical").slick({
-          dots: true,
-          vertical: true,
-          slidesToShow: 3,
-          slidesToScroll: 3
-        });
-        $(".regular").slick({
-          dots: true,
-          infinite: true,
-          slidesToShow: 3,
-          slidesToScroll: 3
-        });
-        $(".center").slick({
-          dots: true,
-          infinite: true,
-          centerMode: true,
-          slidesToShow: 5,
-          slidesToScroll: 3
-        });
-        $(".variable").slick({
-          dots: true,
-          infinite: true,
-          variableWidth: true
-        });
-        $(".lazy").slick({
-          lazyLoad: 'ondemand', // ondemand progressive anticipated
-          infinite: true
-        });
+    <script>
+      window.addEventListener("scroll", function(event) {
+        if(this.scrollY != 0) {
+        document.getElementById('nav').style.background = "#fff";
+        }
+        else {
+        document.getElementById('nav').style.background = "transparent";
+        }
       });
-   </script>
-
-      
+    </script>
   </body>
 </html>

@@ -41,17 +41,3 @@ section {
   height: 90vh;
 }
 
-
-.nav-kronio {
-  background: black;
-  display: block;
-  position: fixed;
-  width: 100%;
-  z-index: 99999;
-  transition: all ease .5s;
-}
-
-#nav-kronio.change {
-  background: white;
-  transition: all ease .5s;
-}

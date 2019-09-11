@@ -59,7 +59,7 @@
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
-	padding:16px 31px;
+	padding:13px 20px;
 	text-decoration:none;
 }
 .btn-lightblue-kronio:hover {
@@ -74,39 +74,16 @@
 
 .input-kronio
 {
-  display: inline-block;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  float: none;
-  z-index: auto;
-  width: auto;
-  height: auto;
-  position: static;
-  cursor: default;
-  opacity: 1;
-  margin: 0;
-  padding: 10px 20px;
-  overflow: visible;
-  border: 1px solid #335EEA;
-  -webkit-border-radius: 10px 0 0 10px;
-  -moz-border-radius: 10px 0 0 10px;
-  border-radius: 10px 0 0 10px;
-  font: normal 16px/normal "Poppins";
-  color: #335EEA;
-  -o-text-overflow: clip;
-  text-overflow: clip;
-  background: rgba(255,255,255,0.8);
-  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
-  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
-  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
-  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  -webkit-transform: none;
-  transform: none;
-  -webkit-transform-origin: 50% 50% 0;
-  transform-origin: 50% 50% 0;
+    padding: 10px;
+    font-size: 18px;
+    border-width: 1px;
+    border-color: #335EEA;
+    background-color: #ffffff;
+    color: #335EEA;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px rgba(66,66,66,.0);
+    text-shadow: 0px 0px 0px rgba(255,255,255,.75);
 
 }
 
@@ -189,6 +166,7 @@ div.sticky-kronio {
   color: rgba(0, 0, 0, 0.9);
 }
 
+
 .text-kronio{
   width: 506px;
   height: 397px;
@@ -217,6 +195,20 @@ div.sticky-kronio {
   letter-spacing: 0.045em;
 
   color: #637691;
+}
+
+.text-3-kronio{
+  position: absolute;
+  width: 235px;
+  height: 22px;
+  left: 255px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  color: #C2CFF9;
 }
 
 .pagination kronio {
