@@ -186,8 +186,12 @@ gulp.task('html', function(callback) {
     }))
     .pipe(cached())
     .pipe(replace(/assets(.{3})/g, '$1'))
+    .pipe(replace(/webRoot(.{3})/g, '$1'))
+    .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
+    .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
     .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', cleancss()))
+    .pipe(cached())
     .pipe(gulp.dest(paths.dist.base.dir));
 });
 

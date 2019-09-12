@@ -211,6 +211,17 @@ div.sticky-kronio {
   color: #C2CFF9;
 }
 
+.text-4-kronio{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 145%;
+  /* or 23px */
+  letter-spacing: 0.07em;
+  color: #1A1A1A;
+}
+
 .pagination kronio {
   color: black;
   float: left;

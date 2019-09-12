@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    @@include("partials/head.html", {
+      "pageTitle": "KRONIO"
+    })
+    <link rel="stylesheet"  href="../css/kronio.css">
+    <link rel="stylesheet"  href="../css/scss/navbar.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet"  href="./assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+    
+
+
+    <!-- Main-Stylesheets -->
+  </head>
+  <body class="home-area overlay" id="home_page" >
+
+    <!-- MODALS
+    
+    ================================================== -->
+    @@include("partials/modals.html")
+    
+    <!-- NAVBAR
+    ================================================== -->
+    @@include("partials/navbar.html", {
+      "classList": "navbar-togglable fixed-top",
+      "type": "boxed"
+    })
+
+    <!-- WELCOME
+    ================================================== -->
+     <section data-jarallax data-speed=".8" class="pt-12 pb-10 pt-md-15 pb-md-14 wallpaper-kronio" >
+      <div class="pt-12 pb-10 pt-md-15 pb-md-14 wallpaper-kronio-overlay">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-8 col-lg-6">
+            
+            <!-- Heading -->
+            <h1 class="display-3 font-weight-bold text-white" id="welcomeHeadingSource">
+              Remote positions for <br />
+              <span class="text-warning" data-toggle="typed" data-options='{"strings": ["UX Designers", "Ruby Developers", "Data Analysts", "Copywriters"]}'></span>
+            </h1>
+            
+
+            <!-- Text -->
+            <p class="font-size-lg text-white-80 mb-6">
+              We help place the world's top tech talent at the some of the greatest companies in the world.
+            </p>
+
+            <!-- Form -->
+            <form>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text pr-0 border-right-0">
+                    <i class="fe fe-search" id="searchAddon"></i>
+                  </span>
+                </div>
+                <input type="search" class="form-control pl-2 border-left-0" placeholder="Search for a job" aria-label="Search for a job" aria-describedby="searchAddon">
+              </div>
+            </form>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+    </header>
+    <!-- SHAPE
+    ================================================== -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+        @@include("assets/img/shapes/curves/curve-1.svg")
+      </div>
+    </div>
+
+    <!-- FORM
+    ================================================== -->
+    <section class="pb-8 pt-7 pb-md-6 pt-md-10">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+            <!-- Heading -->
+            <h2 class="font-weight-bold">
+              KRONIO el programa que necesitas
+            </h2>
+            <!-- Text -->
+            <p class="font-size-lg text-justify text-4-kronio ">
+              Nuestro rastreador, con diferentes hojas de tiempo y métodos de seguimiento del 
+              <br>tiempo que esta donde estén tus trabajadores. Está listo para ahorrar grandes 
+              <br>procesos,agilizar y potenciar su negocio con TAKIÓN. 
+            </p>
+          </div>
+        </div> <!-- / .row -->
+    </section>
+
+    <!-- Aplicación móvil
+    ================================================== -->
+    <section class="pb-8 pt-7 pb-md-8 pt-md-8">
+      <div class="container " data-aos="fade-up">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-8 col-lg-6 order-md-2">
+            <!-- Image -->
+            <img src="assets/img/illustrations/celular_illus.png" class="img-fluid mw-md-50 mw-lg-55 mb-4 mb-md-1" alt="..." data-aos="fade-up" data-aos-delay="100">
+          </div>
+          <div class="col-12 col-md-8 col-lg-6 order-md-1">
+            <!-- Heading -->
+            <h1 class="display-6 text-center text-md-left">
+              Aplicación móvil  <br>
+            </h1>
+            <!-- Text -->
+            <p class="lead text-center text-md-left text-4-kronio mb-4 mb-lg-8">
+              Nuestro servicio está adaptado a las necesidades múltiples de nuestros usuarios, dado que el trabajo puede ocurrir en cualquier lugar sea este en oficina o campo; la aplicación móvil TAKIÓN tiene todo lo que usted y sus empleados necesitan para rastrear en tiempo preciso y procesar la nómina en minutos con su software preferido, incluso cuando la cobertura Wi-Fi y celular no esté disponible. 
+            </p>
+            <!-- List -->
+            <ul class="list-unstyled">
+              <li class="media">
+                <img src="./assets/svg/checkcircleblue.svg" height="25" class="mr-3" alt="icons">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">Organice y ahorre tiempo, edite turnos de trabajos desde la aplicación.</h5>
+                 
+                </div>
+              </li>
+              <li class="media my-4">
+                <img src="./assets/svg/checkcircleblue.svg" height="25" class="mr-3" alt="icons">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">Ingrese permisos de IESS por enfermedad o por asistencia.</h5>
+                </div>
+              </li>
+              <li class="media">
+                <img src="./assets/svg/checkcircleblue.svg" height="25" class="mr-3" alt="icons">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">Ver las ubicaciones de los empleados desde la ventana “Quién está trabajando”.</h5>
+                  
+                </div>
+              </li>
+              <li class="media my-4">
+                <img src="./assets/svg/checkcircleblue.svg" height="25" class="mr-3" alt="icons">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">Manejo de nómina fácil, obtendrá más organización y resultados reales de horas de trabajo.</h5>
+                </div>
+              </li>
+            </ul>
+        <br>
+      </div> <!-- / .container -->
+    </section>
+
+
+    <!-- KRONIO el programa que necesitas
+    ================================================== -->
+    <section class="pt-12 py-md-4 bg-light">
+      <div class="container " data-aos="fade-up">
+      <div class="text-center">
+        <h1 class="py-md-10 title-2-kronio"> KRONIO el programa que necesitas </h1>
+        <h3 class="py-md-4 text-4-kronio"> Nuestro rastreador, con diferentes hojas de tiempo y métodos de seguimiento del tiempo que esta donde estén tus trabajadores. Está listo para ahorrar grandes procesos,agilizar y potenciar su negocio con KRONIO. </h3>
+      </div>
+      <!-- Primer bloque de cards -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="media">
+              <img class="mr-3" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+              <div class="media-body">
+                <h5 class="mt-0">
+                  Nested media heading
+                </h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="media">
+              <img class="mr-3" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+              <div class="media-body">
+                <h5 class="mt-0">
+                  Nested media heading
+                </h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+    <!-- FOOTER
+    ================================================== -->
+    @@include("partials/footer.html", {
+      "classList": "bg-dark"
+    })
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+    <script>
+      window.addEventListener("scroll", function(event) {
+        if(this.scrollY != 0) {
+        document.getElementById('nav').style.background = "#fff";
+        }
+        else {
+        document.getElementById('nav').style.background = "transparent";
+        }
+      });
+    </script>
+  </body>
+</html>

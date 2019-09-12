@@ -1,11 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  
-
-   @@include("modals.html", {
-      "pageTitle": "KRONIO"
-    })
+   
     <link rel="stylesheet" href="../assets/css/takion.css">
     <link rel="stylesheet" href="../assets/css/flexboxgrid.css">
      <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -18,7 +14,7 @@
   </head>
 
     <nav class="navbar navbar-expand-lg navbar-light border-bottom @@classList">
-    
+    @@if(type=="boxed"){<div class="container">}
         <!-- Logo -->
         <a class="navbar-brand" href="../index.html">
           <img src="@@webRoot/assets/img/illustrations/logo-180x180.jpg" style="width:30%" class="navbar-img img-thumbnail"> <br>
@@ -40,7 +36,7 @@
           <!-- Navigation -->
           <ul class="ml-auto navbar-nav">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="../pricing.html">
+              <a class="nav-link dropdown-toggle" href="@@webRoot/pricing.html">
               Precios
               </a>
               </li>
@@ -73,7 +69,6 @@
               </ul>
           <!-- Button -->
         </div>
-         
+         @@if(type=="boxed"){</div>}
     </nav>
-   <body>
- </body>
+ 
