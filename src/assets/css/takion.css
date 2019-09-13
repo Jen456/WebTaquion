@@ -1,5 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=devanagari,latin-ext');
 
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+ 
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family: "Poppins";
+}
+
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block; }
+
 .btn-blue-kronio {
 	-webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -15,15 +39,37 @@
   -o-text-overflow: clip;
   text-overflow: clip;
   background: #335EEA;
- 
 }
 .btn-blue-kronio:hover {
   color: rgba(255,255,255,1);
   background: rgba(51,94,234,0.9);
   padding:16px 31px;
-  
-
 }
+
+.btn-green-kronio {
+	background-color:#ffffff;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #ebebeb;
+	display:inline-block;
+	cursor:pointer;
+	color:#5bc3a6;
+	font-family:Poppins;
+	font-size:16px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5bc3a6;
+}
+.btn-green-kronio:hover {
+	background-color:#5bc3a6;
+}
+.btn-green-kronio:active {
+	position:relative;
+	top:1px;
+}
+
+
 
 .btn-purple-kronio {
 	background-color:#c2cff9;
@@ -221,6 +267,19 @@ div.sticky-kronio {
   letter-spacing: 0.07em;
   color: #1A1A1A;
 }
+.text-normal-kronio{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 109.37%;
+  /* identical to box height, or 24px */
+
+  text-align: center;
+  letter-spacing: 0.045em;
+
+  color: #FFFFFF;
+}
 
 .pagination kronio {
   color: black;
@@ -234,3 +293,22 @@ div.sticky-kronio {
   background-color: dodgerblue;
   color: white;
 }
+
+.rectangle-green-kronio{
+  background: #5BC3A5;
+}
+
+.text-bold-kronio{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 109.37%;
+  /* or 39px */
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #FFFFFF;
+}
+
