@@ -170,8 +170,6 @@ gulp.task('clean:dist', function(callback) {
   callback();
 });
 
-
-
 gulp.task('html', function(callback) {
   return gulp
     .src(
@@ -180,7 +178,7 @@ gulp.task('html', function(callback) {
       '!' + paths.src.partials.files,
      )
     .pipe(fileinclude({
-      prefix: '@@',
+      prefix: '@@/',
       basepath: '@file',
       indent: true
     }))
