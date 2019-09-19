@@ -16,6 +16,7 @@ const gulpif = require('gulp-if');
 const replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
+var runSeq = require('run-sequence') 
 
 // Define paths
 const paths = {
@@ -195,7 +196,7 @@ gulp.task('html', function(callback) {
 
 
 
-
+gulp.task('heroku:production', function(){ runSeq('clean', 'build', 'minify') })
 gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:packageLock', 'clean:dist'), 'scss', 'html','js','svg','fileinclude','fonts'));
 
 gulp.task('default', gulp.series(gulp.parallel('fileinclude', 'scss'), gulp.parallel('browsersync', 'watch')));

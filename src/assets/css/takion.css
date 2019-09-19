@@ -340,9 +340,8 @@ div.sticky-kronio {
 }
 
 .img-kronio{
-  width: 120%;
-  margin: auto;
+  width: auto;
+  margin: 0;
   height: auto;
-  display: inline-block;
 }
 
