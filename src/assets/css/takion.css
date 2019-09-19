@@ -188,7 +188,7 @@ div.sticky-kronio {
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 109.37%;
   /* or 39px */
 
@@ -206,13 +206,32 @@ div.sticky-kronio {
   font-size: 20px;
   line-height: 109.37%;
   /* identical to box height, or 22px */
-
   text-align: center;
   letter-spacing: 0.125em;
-
   color: rgba(0, 0, 0, 0.9);
 }
+.title-4-kronio{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 145%;
+  /* or 25px */
+  
+  letter-spacing: 0.07em;
+  color: rgba(0, 0, 0, 0.9);
+}
+.title-5-kronio{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 133.5%;
+  /* or 32px */
+  letter-spacing: 0.07em;
+  color: #FFFFFF;
 
+}
 
 .text-kronio{
   width: 506px;
@@ -302,6 +321,9 @@ div.sticky-kronio {
 .rectangle-gray-kronio{
   background: #535864;
 }
+.rectangle-blue-kronio{
+  background: #7796FA; 
+}
 
 .text-bold-kronio{
   font-family: Poppins;
@@ -322,5 +344,5 @@ div.sticky-kronio {
   margin: auto;
   height: auto;
   display: inline-block;
-
 }
+

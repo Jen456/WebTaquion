@@ -72,6 +72,7 @@
     "jquery": "^3.4.1",
     "jshint": "^2.10.2",
     "markdown": "^0.5.0",
+    "materialize-css": "^1.0.0",
     "npm": "^6.11.3",
     "popper.js": "^1.15.0",
     "rfs": "^9.0.0",

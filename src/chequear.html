@@ -1,124 +1,126 @@
 <!doctype html>
 <html lang="en">
   <head>
-
+    
     @@include("partials/head.html", {
       "pageTitle": "KRONIO"
     })
-    <link rel="stylesheet"  href="../css/takion.css">
-    <link rel="stylesheet"  href="../css/scss/navbar.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/animate.css">
-    <link rel="stylesheet"  href="./assets/css/slick.css">
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="@@webRoot/assets/css/takion.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <!-- Main-Stylesheets -->
   </head>
   <body >
-
     <!-- MODALS
-    
     ================================================== -->
     @@include("partials/modals.html")
-    
     <!-- NAVBAR
     ================================================== -->
     @@include("partials/navbar.html", {
       "classList": "navbar-dark navbar-togglable fixed-top",
       "type": "boxed"
     })
-
     <!-- WELCOME
     ================================================== -->
-     <section data-jarallax data-speed=".8" class="pt-12 pb-10 pt-md-15 pb-md-14 wallpaper-kronio" >
-      <div class="container " data-aos="fade-up">
-        <div class="row align-items-center">
-          <div class="col-6 col-md-5 col-lg-4 order-md-2">
-                <!-- Image -->
-                <img src="assets/img/illustrations/dispositivos.png" width="200%" height="350%" data-aos="fade-up" data-aos-delay="100">
+    <section data-jarallax data-speed=".8" class="py-12 py-md-14 overlay overlay-white overlay-80 jarallax wallpaper-kronio" >
+    
+    <div class="container " data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-6 col-md-5 col-lg-4 order-md-2">
+              <!-- Image -->
+          <img src="assets/img/illustrations/dispositivos.png" width="200%" height="350%" data-aos="fade-up" data-aos-delay="100">
+        </div>
+        <div class="col-12 col-md-7 col-lg-6 order-md-1">
+          <!-- Heading -->
+          <h1 style="color:white;" class="title-kronio display-4 text-md-left">
+            Mejora la nómina, <br>
+            la rentabilidad y la <br>
+            productividad
+          </h1>
+          <!-- Text -->
+          <p style="color:white;" class="lead text-center text-md-left mb-4 mb-lg-10">
+            <br>Con nuestro rastreador de hojas de tiempo que te pone en control.
+          </p>
+          <!-- FORM -->
+          <form>
+            <div class="col-16 col-xs-12 btn-group input-group mb-2">
+              <input type="email" class="input-kronio form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <div style=""class="input-group-prepend">
+                <a href="#" button type="button" class="btn btn-lightblue-kronio">Prueba Gratis KRONIO</a>
               </div>
-              <div class="col-12 col-md-7 col-lg-6 order-md-1">
-                <!-- Heading -->
-                <h1 style="color:white;" class="title-kronio display-4 text-md-left">
-                  Mejora la nómina, <br>
-                  la rentabilidad y la <br>
-                  productividad
-                </h1>
-                <!-- Text -->
-                <p style="color:white;" class="lead text-center text-md-left mb-4 mb-lg-10">
-                  <br>Con nuestro rastreador de hojas de tiempo que te pone en control.
-                </p>
-
-                <!-- FORM -->
-                <form>
-                  <div class="col-16 col-xs-12 btn-group input-group mb-2">
-                    <input type="email" class="input-kronio form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <div style=""class="input-group-prepend">
-                      <a href="#" button type="button" class="btn btn-lightblue-kronio">Prueba Gratis KRONIO</a>
-                    </div>
-                    
-                  </div>
-                  
-                </form>
-                <div class="text-3-kronio text-white">No se requiere tarjeta de crédito</div>
-
-                <!-- Buttons -->
-                <div class="text-center text-md-left pt-8 py-4">
-                  <img src="assets/img/illustrations/button-play.png"  alt="Card image cap" height="50" data-aos="fade-up" data-aos-delay="100">
-                  <img class="px-6" src="assets/img/illustrations/button-app.png"  alt="Card image cap" height="50" data-aos="fade-up" data-aos-delay="100">
-                </div>
-              </div>
-        </div> <!-- / .row -->
-          
-      </div> <!-- / .container -->
-    </section>
-    </header>
-
+            </div>
+          </form>
+          <div class="text-3-kronio text-white">No se requiere tarjeta de crédito</div>
+          <!-- Buttons -->
+          <div class="col-12 py-xl-9">
+            <img src="assets/img/illustrations/button-play.png"  alt="Card image cap" height="50" data-aos="fade-up" data-aos-delay="100">
+            <img class="px-6" src="assets/img/illustrations/button-app.png"  alt="Card image cap" height="50" data-aos="fade-up" data-aos-delay="100">
+          </div>
+        </div>
+      </div> <!-- / .row -->
+      
+    </div> <!-- / .container -->
+    
+  </section>
     <!-- INTRODUCCION
     ================================================== -->
-    <section class="pb-8 pt-7 pb-md-6 pt-md-10">
+     <!-- / boton de deslizar-->
+    <div class="row">
+      <div class="col-12 py-md-10 text-center">
+        <!-- Button -->
+        <a href="#about" class="btn btn-white btn-rounded-circle shadow mt-n12 mt-md-n14" data-toggle="smooth-scroll">
+          <i class="fe fe-arrow-down"></i>
+        </a>
+      </div>
+    </div> <!-- / .row -->
+
+    <section class="pb-6 pt-11 pb-md-10 pt-md-11">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-8 text-center">
+          <div class="text-center">
             <!-- Heading -->
             <h2 class="font-weight-bold">
               KRONIO el programa que necesitas
             </h2>
             <!-- Text -->
-            <p class="font-size-lg text-justify text-4-kronio ">
-              Nuestro rastreador, con diferentes hojas de tiempo y métodos de seguimiento del 
+            <p class=" text-justify text-4-kronio ">
+              <br>Nuestro rastreador, con diferentes hojas de tiempo y métodos de seguimiento del 
               <br>tiempo que esta donde estén tus trabajadores. Está listo para ahorrar grandes 
               <br>procesos,agilizar y potenciar su negocio con TAKIÓN. 
             </p>
           </div>
         </div> <!-- / .row -->
+        
     </section>
 
-    <!-- Aplicación móvil
+   <!-- Aplicación móvil
     ================================================== -->
-    <section class="pb-8 pt-7 pb-md-8 pt-md-8">
+    <section class="pb-8 pt-10 pb-md-4 pt-md-4">
       <div class="container " data-aos="fade-up">
         <div class="row align-items-center">
           <div class="col-12 col-md-8 col-lg-6 order-md-2">
             <!-- Image -->
-            <img src="assets/img/illustrations/celular_illus.png" class="img-fluid mw-md-50 mw-lg-55 mb-4 mb-md-1" alt="..." data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/illustrations/Aplicacionmovil.png" class="img-fluid mw-md-100 mw-lg-55 mb-4 mb-md-1" alt="..." data-aos="fade-up" data-aos-delay="100">
           </div>
+
           <div class="col-12 col-md-8 col-lg-6 order-md-1">
             <!-- Heading -->
             <h1 class="display-6 text-center text-md-left">
               Aplicación móvil  <br>
             </h1>
             <!-- Text -->
-            <p class="lead text-center text-md-left text-4-kronio mb-4 mb-lg-8">
-              Nuestro servicio está adaptado a las necesidades múltiples de nuestros usuarios, dado que el trabajo puede ocurrir en cualquier lugar sea este en oficina o campo; la aplicación móvil TAKIÓN tiene todo lo que usted y sus empleados necesitan para rastrear en tiempo preciso y procesar la nómina en minutos con su software preferido, incluso cuando la cobertura Wi-Fi y celular no esté disponible. 
-            </p>
+            <h3 class="px-0 py-md-4 text-justify text-4-kronio"> 
+                Nuestro rastreador, con diferentes hojas de tiempo y métodos de 
+            <br>seguimiento del tiempo que esta donde estén tus trabajadores. Está listo 
+            <br>para ahorrar grandes procesos,agilizar y potenciar su negocio con 
+            <br>KRONIO. </h3>
             <!-- List -->
             <ul class="list-unstyled">
               <li class="media">
                 <img src="./assets/svg/checkcircleblue.svg" height="25" class="mr-3" alt="icons">
                 <div class="media-body">
                   <h5 class="mt-0 mb-1">Organice y ahorre tiempo, edite turnos de trabajos desde la aplicación.</h5>
-                 
                 </div>
               </li>
               <li class="media my-4">
@@ -131,7 +133,6 @@
                 <img src="./assets/svg/checkcircleblue.svg" height="25" class="mr-3" alt="icons">
                 <div class="media-body">
                   <h5 class="mt-0 mb-1">Ver las ubicaciones de los empleados desde la ventana “Quién está trabajando”.</h5>
-                  
                 </div>
               </li>
               <li class="media my-4">
@@ -144,136 +145,148 @@
         <br>
       </div> <!-- / .container -->
     </section>
-
-
     <!-- KRONIO el programa que necesitas
     ================================================== -->
-    <section class="pt-12 py-md-4 bg-light">
-      <div class="container " data-aos="fade-up">
-      <div class="text-center">
-        <h1 class="pt-12 py-md-2 title-2-kronio"> KRONIO el programa que necesitas </h1>
-        <h3 class="pt-12 py-md-8 text-4-kronio"> Nuestro rastreador, con diferentes hojas de tiempo y métodos de seguimiento del tiempo que esta donde estén tus trabajadores. Está listo para ahorrar grandes procesos,agilizar y potenciar su negocio con KRONIO. </h3>
-      </div>
-      <!-- Primer bloque de cards -->
-      <div class="container-fluid">
+    <section class="pt-8 pt-md-10 bg-gray-200" id="about">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class=" col-12 col-md-10 col-lg-10 text-center">
+            <h1 class="px-md-4 title-2-kronio text-center"> KRONIO el programa que necesitas </h1>
+          </div>
+        </div> <!-- / .row -->
+        
+      <div class="row py-md-8">
+      <!-- 1era columna-->
+        <div class="col-12 col-lg-6">
+          <!-- Item -->
+          <div class="row align-items-center mb-12"data-aos="fade-up">
+            <div class="col-4 col-lg-4">
+              <!-- Image -->
+              <img src="./assets/svg/localizacion-gps.svg" style="width: 100px; height: 200px;" alt="gps" class="img-fluid">
+            </div>
+            <div class="col-8 col-lg-7">
+              <!-- Heading -->
+              <h3 class="title-4-kronio mb-2">
+                Localización GPS
+              </h3>
+              <!-- Text -->
+              <p class="text-4-kronio mb-1">
+                    Vea quién está en el reloj y dónde 
+                <br>están trabajando, todo en tiempo 
+                <br>real. Obtenga más información sobre 
+                <br>el seguimiento por GPS. 
+              </p>
+            </div>
+          </div> <!-- / .row -->
+          <!-- Item -->
+          <div class="row align-items-center mb-8" data-aos="fade-up">
+              <div class="col-4 col-lg-4">
+                <!-- Image -->
+                <img src="assets/svg/suitcase.svg" style="width: 100px; height: 200px;" alt="suitcase" class="img-fluid">
+              </div>
+              <div class="col-8 col-lg-7">
+                <!-- Heading -->
+                <h3 class="font-weight-bold mb-2">
+                  Rastrear y enviar el tiempo libre pagado
+                </h3>
+                <!-- Text -->
+                <p class="text-4-kronio mb-1">
+                   Use la aplicación móvil para rastrear 
+                <br>el tiempo libre pagado, los días de 
+                <br>enfermedad y las vacaciones en 
+                <br>cualquier momento y en cualquier 
+                <br>lugar.
+                </p>
+              </div>
+           </div> <!-- / .row -->
+           <!-- Item -->
+          <div class="row align-items-center mb-8" data-aos="fade-up">
+              <div class="col-4 col-lg-4">
+                <!-- Image -->
+                <img src="assets/svg/smartphone-clock.svg" style="width: 100px; height: 200px;" alt="suitcase" class="img-fluid">
+              </div>
+              <div class="col-8 col-lg-7">
+                <!-- Heading -->
+                <h3 class="font-weight-bold mb-2">
+                  Hojas de horas móviles
+                </h3>
+                <!-- Text -->
+                <p class="text-4-kronio mb-1">
+                    Registre la entrada o la salida al 
+                <br>instante desde un Android o iPhone.
+                <br>KRONIO funciona incluso sin cobertura 
+                <br>celular. ¡Llévate tu tablet con nuestro  
+                <br>plan! </p>
+              </div>
+           </div> <!-- / .row -->
+        </div><!-- fin de la columna -->
 
-        <div class="row">
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6 py-md-4">
-                <img  style="width: 100px; height: 200px;" alt="gps" src="./assets/svg/localizacion-gps.svg">
-              </div>
-              <div class="col-md-6">
-                <blockquote class="blockquote">
-                <h3 class="title-4-kronio">Localización GPS </h3>
-                  <p class="text-4-kronio ">
-                    <br>Vea quién está en el reloj y dónde 
-                    <br>están trabajando, todo en tiempo 
-                    <br>real. Obtenga más información sobre 
-                    <br>el seguimiento por GPS. 
-                  </p>
-                </blockquote>
-              </div>
+      <!-- 2da columna-->
+        <div class="col-12 col-lg-6">
+          <!-- Item -->
+          <div class="row align-items-center mb-12"data-aos="fade-up">
+            <div class="col-8 col-lg-3">
+              <!-- Image -->
+              <img src="./assets/svg/firmas.svg" style="width: 100px; height: 200px;" alt="firma" class="img-fluid">
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6 py-md-4 m-md-0">
-                <img  style="width: 100px; height: 200px;" alt="gps" src="./assets/svg/firmas.svg">
-              </div>
-              <div class="col-md-6">
-                <blockquote class="blockquote">
-                <h3 class="title-4-kronio">Firmas de partes de horas </h3>
-                  <p class="text-4-kronio ">
-                    <br>Capture firmas para cierres de 
-                    <br>proyecto. Los empleados pueden  
-                    <br>adjuntar una firma a su hoja de horas 
-                    <br>mientras usan la aplicación móvil 
-                    <br>KRONIO.
-                  </p>
-                </blockquote>
-              </div>
+            <div class="col-8 col-lg-7">
+              <!-- Heading -->
+              <h3 class="font-weight-bold mb-2">
+                Firmas de partes de horas
+              </h3>
+              <!-- Text -->
+              <!-- Text -->
+                <p class="text-4-kronio mb-1">
+                    Capture firmas para cierres de 
+                <br>proyecto. Los empleados pueden 
+                <br>adjuntar una firma a su hoja de horas  
+                <br>mientras usan la aplicación móvil  
+                <br>KRONIO. </p>
             </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6 py-md-4 m-md-0">
-                <img  style="width: 100px; height: 200px;" alt="gps" src="./assets/svg/suitcase.svg">
+          </div> <!-- / .row -->
+          <!-- Item -->
+          <div class="row align-items-center mb-8" data-aos="fade-up">
+              <div class="col-8 col-lg-3">
+                <!-- Image -->
+                <img src="assets/svg/calendario-programación.svg" style="width: 100px; height: 200px;" alt="calendario-programacion" class="img-fluid">
               </div>
-              <div class="col-md-6">
-                <blockquote class="blockquote">
-                <h3 class="title-4-kronio">Rastrear y enviar el tiempo libre pagado </h3>
-                  <p class="text-4-kronio ">
-                    <br>Use la aplicación móvil para rastrear  
-                    <br>el tiempo libre pagado, los días de 
-                    <br>enfermedad y las vacaciones en  
-                    <br>cualquier momento y en cualquier 
-                    <br>lugar.
-                  </p>
-                </blockquote>
+              <div class="col-8 col-lg-7">
+                <!-- Heading -->
+                <h3 class="font-weight-bold mb-2">
+                  Programación rápida
+                </h3>
+                <!-- Text -->
+                <p class="text-4-kronio mb-1">
+                    Cree, edite y publique trabajos  
+                <br>programadoso turnos desde  
+                <br>cualquier lugar. 
+                </p>
               </div>
+           </div> <!-- / .row -->
+           <!-- Item -->
+          <div class="row align-items-center mb-8" data-aos="fade-up">
+              <div class="col-8 col-lg-3">
+                <!-- Image -->
+                <img src="assets/svg/network.svg" style="width: 100px; height: 200px;" alt="calendario-programacion" class="img-fluid">
+              </div>
+              <div class="col-8 col-lg-7">
+                <!-- Heading -->
+                <h3 class="font-weight-bold mb-2">
+                  Funcionalidad del grupo
+                </h3>
+                <!-- Text -->
+                <p class="text-4-kronio mb-1">
+                    Los gerentes de equipo pueden  
+                <br>registrar la entrada / salida de los 
+                <br>miembros del equipo individualmente
+                <br>o de una vez.  
+                </p>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6 py-md-4 m-md-0">
-                <img  style="width: 100px; height: 200px;" alt="gps" src="./assets/svg/calendario-programación.svg">
-              </div>
-              <div class="col-md-6">
-                <blockquote class="blockquote">
-                <h3 class="title-4-kronio">Programación rápida </h3>
-                  <p class="text-4-kronio ">
-                    <br>Cree, edite y publique trabajos  
-                    <br>programadoso turnos desde  
-                    <br>cualquier lugar.  
-                  </p>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6 py-md-4 m-md-0">
-                <img  style="width: 100px; height: 200px;" alt="gps" src="./assets/svg/smartphone-clock.svg">
-              </div>
-              <div class="col-md-6">
-                <blockquote class="blockquote">
-                <h3 class="title-4-kronio">Hojas de horas móviles</h3>
-                  <p class="text-4-kronio ">
-                    <br>Registre la entrada o la salida al   
-                    <br>instante desde un Android o iPhone. 
-                    <br>KRONIO funciona incluso sin cobertura 
-                    <br>celular. ¡Llévate tu tablet con nuestro
-                    <br>plan! 
-                  </p>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6 py-md-4 m-md-0">
-                <img  style="width: 100px; height: 200px;" alt="gps" src="./assets/svg/network.svg">
-              </div>
-              <div class="col-md-6">
-                <blockquote class="blockquote">
-                <h3 class="title-4-kronio">Funcionalidad del grupo</h3>
-                  <p class="text-4-kronio ">
-                    <br>Los gerentes de equipo pueden 
-                    <br>registrar la entrada / salida de los  
-                    <br>miembros del equipo individualmente 
-                    <br>o de una vez. 
-                  </p>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+           </div> <!-- / .row -->
+        </div><!-- fin de la 2da columna -->
+      </div> <!-- / .row -->
+     </div> <!-- / .container -->
+  </section>
 
   <!-- HORAS MOVILES 
       ================================================== -->
@@ -282,7 +295,7 @@
         <div class="row align-items-center justify-content-between">
           <div class="col-lg-4 col-8 order-md-2">
             <!-- Image -->
-            <img src="assets/img/illustrations/reunión.png" class="img-fluid  aos-init aos-animate mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/illustrations/compu-cel.png" class="img-fluid  aos-init aos-animate mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
           </div>
           <div class="col-lg-8 col-4 order-md-1">
             <!-- Heading -->
@@ -307,7 +320,6 @@
         </div> <!-- / .row -->
       </div> <!-- / .container -->
     </section>
-
 <!-- BARRA VERDE
     ================================================== -->
     <section class="py-6 py-md-8 rectangle-green-kronio">
@@ -327,11 +339,9 @@
         </div>
       </div>
     </section>
-
     <!-- imagen con texto 
     ================================================== -->
-    
-    <section class="px-6 rectangle-gray-kronio">
+<section class="pt-2 pt-md-1 pb-2  rectangle-gray-kronio">
     <div class="container-fluid-justify-center">
       <div class="row">
         <div class="col-md-6 py-md-12 ">
@@ -350,15 +360,28 @@
       </div>
     </div>
     </section>
-
+  <!-- Grupo de lista 
+    ================================================== -->
+   <section class="pt-6 pt-md-8 pb-8 mb-md-0 rectangle-blue-kronio ">
+      <div class="list-group  ">
+        <ul class="list-group-flush">
+        <li class=" list-group-item rectangle-blue-kronio text-white">¿Cuántos datos usa la aplicación KRONIO?</li>
+        <li class="list-group-item rectangle-blue-kronio text-white">Dapibus ac facilisis in</li>
+        <li class="list-group-item rectangle-blue-kronio text-white">Morbi leo risus</li>
+        <li class="list-group-item rectangle-blue-kronio text-white">Porta ac consectetur ac</li>
+        <li class="list-group-item rectangle-blue-kronio text-white">Vestibulum at eros</li>
+      </ul>
+      </div>
+    </section>
+    
     <!-- FOOTER
     ================================================== -->
     @@include("partials/footer.html", {
       "classList": "bg-dark"
     })
-
     <!-- JAVASCRIPT
     ================================================== -->
     @@include("partials/scripts.html")
+    
   </body>
 </html>
