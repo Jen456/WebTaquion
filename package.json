@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "author": "Jenny",
   "scripts": {
-    "build": "gulp",
+    "build": "node gulpfile.js",
     "start": "node gulpfile.js",
     "postinstall": "gulp default"
   },
