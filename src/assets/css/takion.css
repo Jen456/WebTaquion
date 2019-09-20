@@ -20,7 +20,6 @@
   --font-family: "Poppins";
 }
 
-
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
 
@@ -28,7 +27,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 	-webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-
   cursor: pointer;
   border: none;
   padding:16px 31px;  
@@ -40,6 +38,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   text-overflow: clip;
   background: #335EEA;
 }
+
 .btn-blue-kronio:hover {
   color: rgba(255,255,255,1);
   background: rgba(51,94,234,0.9);
@@ -61,16 +60,16 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #5bc3a6;
 }
+
 .btn-green-kronio:hover {
   background-color:#5bc3a6;
   background: #f2f4f5;
 }
+
 .btn-green-kronio:active {
 	position:relative;
 	top:1px;
 }
-
-
 
 .btn-purple-kronio {
 	background-color:#c2cff9;
@@ -86,14 +85,15 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 	padding:16px 31px;
 	text-decoration:none;
 }
+
 .btn-purple-kronio:hover {
 	background-color:#c2cff9;
 }
+
 .btn-purple-kronio:active {
 	position:relative;
 	top:1px;
 }
-
 
 .btn-lightblue-kronio {
 	background-color:#1098e7;
@@ -131,17 +131,14 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     border-radius: 10px;
     box-shadow: 0px 0px 0px rgba(66,66,66,.0);
     text-shadow: 0px 0px 0px rgba(255,255,255,.75);
-
 }
 
 .wallpaper-kronio{
-  
   background: linear-gradient(90deg, #335EEA 0%, #A46CEC 100.9%);
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
 }
 
 .wallpaper-kronio-overlay{
-
   background: radial-gradient(589.58px at 50% 50%, rgba(255, 254, 254, 0) 0%, rgba(0, 0, 0, 0.44) 100%);
 }
 
@@ -150,7 +147,6 @@ div.sticky-kronio {
   position: sticky;
   top: 0;
   padding: 5px;
- 
 }
 
 .title-kronio {
@@ -162,7 +158,6 @@ div.sticky-kronio {
   font-size: 32px;
   line-height: 116.87%;
   /* or 37px */
-
   letter-spacing: 0.125em;
   color: rgba(0, 0, 0, 0.9);
 }
@@ -174,11 +169,8 @@ div.sticky-kronio {
   font-size: 50px;
   line-height: 109.37%;
   /* or 55px */
-  
   letter-spacing: 0.055em;
-  
   color: rgba(0, 0, 0, 0.9);
-  
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
@@ -191,10 +183,8 @@ div.sticky-kronio {
   font-size: 30px;
   line-height: 109.37%;
   /* or 39px */
-
   text-align: center;
   letter-spacing: 0.125em;
-
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -244,7 +234,6 @@ div.sticky-kronio {
   font-size: 18px;
   line-height: 128%;
   /* or 23px */
-
   letter-spacing: 0.045em;
   color: #869AB8;
 }
@@ -256,10 +245,8 @@ div.sticky-kronio {
   font-size: 16px;
   line-height: 128%;
   /* or 20px */
-
   text-align: center;
   letter-spacing: 0.045em;
-
   color: #637691;
 }
 
@@ -294,10 +281,8 @@ div.sticky-kronio {
   font-size: 22px;
   line-height: 109.37%;
   /* identical to box height, or 24px */
-
   text-align: center;
   letter-spacing: 0.045em;
-
   color: #FFFFFF;
 }
 
@@ -332,10 +317,8 @@ div.sticky-kronio {
   font-size: 36px;
   line-height: 109.37%;
   /* or 39px */
-
   text-align: center;
   letter-spacing: 0.04em;
-
   color: #FFFFFF;
 }
 

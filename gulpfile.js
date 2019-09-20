@@ -1,13 +1,8 @@
-//
-// Variables ===================================
-//
-
 // Load dependencies
 const autoprefixer = require('gulp-autoprefixer');
 const browsersync = require('browser-sync').create();
 const cached = require('gulp-cached');
 const npmdist = require('gulp-npm-dist');
-
 const cleancss = require('gulp-clean-css');
 const del = require('del');
 const fileinclude = require('gulp-file-include');
@@ -85,8 +80,6 @@ const paths = {
     }
   }
 };
-
-
 //
 // Tasks ===================================
 //
@@ -110,7 +103,6 @@ gulp.task('watch', function() {
   gulp.watch([paths.src.js.files, paths.src.img.files], gulp.series('browsersyncReload'));
   gulp.watch([paths.src.html.files, paths.src.partials.files], gulp.series('fileinclude', 'browsersyncReload'));
 });
-
 
 gulp.task('scss', function() {
   return gulp
@@ -153,7 +145,6 @@ gulp.task('fileinclude', function(callback) {
     }))
     .pipe(cached())
     .pipe(gulp.dest(paths.src.tmp.dir));
-    
 });
 
 gulp.task('clean:tmp', function(callback) {
@@ -185,7 +176,7 @@ gulp.task('html', function(callback) {
     }))
     .pipe(cached())
     .pipe(replace(/assets(.{3})/g, '$1'))
-    .pipe(replace(/webRoot(.{3})/g, '$1'))
+    .pipe(replace(/webRoot(.{3})/g, '$assets/'))
     .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
     .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
     .pipe(gulpif('*.js', uglify()))
@@ -194,9 +185,5 @@ gulp.task('html', function(callback) {
     .pipe(gulp.dest(paths.dist.base.dir));
 });
 
-
-
-gulp.task('heroku:production', function(){ runSeq('clean', 'build', 'minify') })
 gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:packageLock', 'clean:dist'), 'scss', 'html','js','svg','fileinclude','fonts'));
-
 gulp.task('default', gulp.series(gulp.parallel('fileinclude', 'scss'), gulp.parallel('browsersync', 'watch')));
