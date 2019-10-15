@@ -166,6 +166,7 @@ gulp.task('html', function(callback) {
   return gulp
     .src(
       paths.src.html.files,
+      '!' + paths.src.tmp.files,
       '!' + paths.src.partials.files,
      )
     .pipe(fileinclude({
