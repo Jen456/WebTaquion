@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Libs CSS -->
+<link rel="stylesheet" href="..//fonts/Feather/feather.css">
+<link rel="stylesheet" href="../node_modules/flickity/dist/flickity.min.css">
+<link rel="stylesheet" href="../node_modules/flickity-fade/flickity-fade.css">
+<link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
+<link rel="stylesheet" href="../node_modules/jarallax/dist/jarallax.css">
+<link rel="stylesheet" href="../node_modules/highlightjs/styles/vs2015.css">
+<link rel="stylesheet" href="../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+
+<!-- Map -->
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+<!-- Theme CSS -->
+<!-- build:css ..//css/theme.min.css -->
+<link rel="stylesheet" href="..//css/theme.css">
+<!-- endbuild -->
+
+<title>Landkit</title>
+  </head>
+  <body>
+
+    <!-- CONTENT
+    ================================================== -->
+    <section class="section-border border-primary">
+      <div class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-center no-gutters min-vh-100">
+          <div class="col-8 col-md-6 col-lg-7 offset-md-1 order-md-2 mt-auto mt-md-0 pt-8 pb-4 py-md-11">
+
+            <!-- Image -->
+            <img src="/img/illustrations/illustration-2.png" alt="..." class="img-fluid">
+
+          </div>
+          <div class="col-12 col-md-5 col-lg-4 order-md-1 mb-auto mb-md-0 pb-8 py-md-11">
+
+            <!-- Heading -->
+            <h1 class="mb-0 font-weight-bold text-center">
+              Inicio Sesión
+            </h1>
+
+            <!-- Text -->
+            <p class="mb-6 text-center text-muted">
+              Simplifica tu trabajo en minutos con nosotros
+            </p>
+
+            <!-- Form -->
+            <form class="mb-6">
+
+
+              <!-- Email -->
+              <div class="form-group">
+
+                <input type="email" class="form-control" id="email" placeholder="Usuario">
+              </div>
+
+              <!-- Password -->
+              <div class="form-group mb-5">
+                <input type="password" class="form-control" id="psw" placeholder="Contraseña" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caracteres" required>
+              </div>
+
+              <!-- mensaje  -->
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+              <div id="message" class="text-muted">
+                <h6>La contraseña debe contener lo siguiente:</h6>
+                <h6 id="letter" class="invalid">* <b>letras</b> minúsculas</h6>
+                <h6 id="capital" class="invalid">* Al menos una <b>letra</b> mayúscula</h6>
+                <h6 id="number" class="invalid">* Al menos un  <b>número</b></h6>
+                <h6 id="length" class="invalid">* Mínimo <b>8 caracteres</b></h6>
+              </div>
+               </div>
+            </div>
+              <!-- Submit -->
+              <button class="btn btn-block btn-primary" type="submit">
+                Entrar
+              </button>
+
+            </form>
+
+            <!-- Text -->
+            <p class="mb-0 font-size-sm text-center text-muted">
+              ¿Aún no tienes una cuenta? <a href="signup-illustration.html">Regístrate</a>.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+
+  <!-- JAVASCRIPT  INGRESAR CONTRASEÑA SEGURA
+    ================================================== -->
+    <!-- Libs JS -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../node_modules/flickity/dist/flickity.pkgd.min.js"></script>
+<script src="../node_modules/flickity-fade/flickity-fade.js"></script>
+<script src="../node_modules/aos/dist/aos.js"></script>
+<script src="../node_modules/smooth-scroll/dist/smooth-scroll.min.js"></script>
+<script src="../node_modules/jarallax/dist/jarallax.min.js"></script>
+<script src="../node_modules/jarallax/dist/jarallax-video.min.js"></script>
+<script src="../node_modules/jarallax/dist/jarallax-element.min.js"></script>
+<script src="../node_modules/typed.js/lib/typed.min.js"></script>
+<script src="../node_modules/countup.js/dist/countUp.min.js"></script>
+<script src="../node_modules/highlightjs/highlight.pack.min.js"></script>
+<script src="../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+
+<!-- Map -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<!-- Theme JS -->
+<!-- build:js ..//js/theme.min.js -->
+<script src="..//js/aos.js"></script>
+<script src="..//js/countup.js"></script>
+<script src="..//js/fancybox.js"></script>
+<script src="..//js/highlight.js"></script>
+<script src="..//js/map.js"></script>
+<script src="..//js/navbar.js"></script>
+<script src="..//js/polyfills.js"></script>
+<script src="..//js/popovers.js"></script>
+<script src="..//js/pricing.js"></script>
+<script src="..//js/smooth-scroll.js"></script>
+<script src="..//js/theme.js"></script>
+<script src="..//js/tooltips.js"></script>
+<script src="..//js/typed.js"></script>
+<!-- endbuild -->
+
+  </body>
+
+
+      <script>
+          var myInput = document.getElementById("psw");
+          var letter = document.getElementById("letter");
+          var capital = document.getElementById("capital");
+          var number = document.getElementById("number");
+          var length = document.getElementById("length");
+
+          // When the user clicks on the password field, show the message box
+          myInput.onfocus = function() {
+            document.getElementById("message").style.display = "block";
+          }
+
+          // When the user clicks outside of the password field, hide the message box
+          myInput.onblur = function() {
+            document.getElementById("message").style.display = "none";
+          }
+
+          // When the user starts to type something inside the password field
+          myInput.onkeyup = function() {
+            // Validate lowercase letters
+            var lowerCaseLetters = /[a-z]/g;
+            if(myInput.value.match(lowerCaseLetters)) {
+              letter.classList.remove("invalid");
+              letter.classList.add("valid");
+            } else {
+              letter.classList.remove("valid");
+              letter.classList.add("invalid");
+            }
+
+            // Validate capital letters
+            var upperCaseLetters = /[A-Z]/g;
+            if(myInput.value.match(upperCaseLetters)) {
+              capital.classList.remove("invalid");
+              capital.classList.add("valid");
+            } else {
+              capital.classList.remove("valid");
+              capital.classList.add("invalid");
+            }
+
+            // Validate numbers
+            var numbers = /[0-9]/g;
+            if(myInput.value.match(numbers)) {
+              number.classList.remove("invalid");
+              number.classList.add("valid");
+            } else {
+              number.classList.remove("valid");
+              number.classList.add("invalid");
+            }
+
+            // Validate length
+            if(myInput.value.length >= 8) {
+              length.classList.remove("invalid");
+              length.classList.add("valid");
+            } else {
+              length.classList.remove("valid");
+              length.classList.add("invalid");
+            }
+          }
+      </script>
+</html>

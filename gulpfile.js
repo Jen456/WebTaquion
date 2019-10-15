@@ -166,22 +166,20 @@ gulp.task('html', function(callback) {
   return gulp
     .src(
       paths.src.html.files,
-      '!' + paths.src.tmp.files,
       '!' + paths.src.partials.files,
      )
     .pipe(fileinclude({
-      prefix: '@@/',
+      prefix: '@@',
       basepath: '@file',
       indent: true
     }))
     .pipe(cached())
-    .pipe(replace(/assets(.{3})/g, '$1'))
-    .pipe(replace(/webRoot(.{3})/g, '$assets/'))
-    .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
-    .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
+    .pipe(replace(/@@webRoot/g, '.'))
+    .pipe(replace(/assets/g, '.'))
+    
+   
     .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', cleancss()))
-    .pipe(cached())
     .pipe(gulp.dest(paths.dist.base.dir));
 });
 
