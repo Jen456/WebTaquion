@@ -1,8 +1,9 @@
-# TAKION #
+# KRONIO #
 
 derechos reservados.
+Este landing fue creado por Jenny Alava. Pueden ver mis trabajos en jennyalava.c1.biz
 
-### Documentation ###
+### Vista del proyecto ###
 
- http://landkit.goodthemes.co/docs/index.html.
+ 
 
