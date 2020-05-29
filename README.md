@@ -7,7 +7,7 @@ Este landing fue creado por Jenny Alava. Pueden ver mis trabajos en jennyalava.c
 
  ![](https://github.com/Jen456/WebTaquion/blob/master/kronio1.png)
 
-###Configuración de desarrollo
+#### Configuración de desarrollo ####
 >Para comenzar, debe hacer lo siguiente:
 
 >Asegúrese de tener Nodo instalado ya que Landkit usa npm para administrar dependencias. Si no lo hace, la instalación es bastante fácil, solo visite la página de descargas de nodos e instálela.
